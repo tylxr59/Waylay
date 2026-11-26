@@ -307,9 +307,10 @@ function money(c, opts = {}) {
   return (neg ? "−" : "") + out;
 }
 /* ---------- Wowhead links (tooltips.js adds hover tooltips + icons) ---------- */
-const WH = "https://www.wowhead.com/forever/";
-const wh = (type, id, text) => id ? el("a", { href: `${WH}${type}=${id}`, target: "_blank", rel: "noopener" }, text) : text;
-const whSearch = text => el("a", { href: `${WH}search?q=${encodeURIComponent(text)}`, target: "_blank", rel: "noopener", title: "Search Wowhead" }, text);
+// not "WH": that is Wowhead tooltips.js's own global and a clash breaks it
+const WOWHEAD_URL = "https://www.wowhead.com/forever/";
+const wh = (type, id, text) => id ? el("a", { href: `${WOWHEAD_URL}${type}=${id}`, target: "_blank", rel: "noopener" }, text) : text;
+const whSearch = text => el("a", { href: `${WOWHEAD_URL}search?q=${encodeURIComponent(text)}`, target: "_blank", rel: "noopener", title: "Search Wowhead" }, text);
 let whPending = false;
 function whRefresh() {
   if (whPending) return; whPending = true;
