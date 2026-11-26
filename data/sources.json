@@ -1,0 +1,13 @@
+{
+  "_note": "Which TSM price files the site is built from. Every region gets a region-wide page (all rulesets, both factions). Each listed ruleset gets an Alliance and a Horde page from TSM's per-ruleset, per-faction files (realm slug '<ruleset>-<faction>'). KR and TW only have Normal and PvP.",
+  "game": "forever",
+  "default": "us",
+  "rulesetNames": {"normal": "Normal", "pvp": "PvP", "roleplay": "RP", "roleplay-pvp": "RP-PvP"},
+  "factions": ["alliance", "horde"],
+  "regions": [
+    {"id": "us", "name": "US", "rulesets": ["normal", "pvp", "roleplay", "roleplay-pvp"]},
+    {"id": "eu", "name": "EU", "rulesets": ["normal", "pvp", "roleplay", "roleplay-pvp"]},
+    {"id": "kr", "name": "KR", "rulesets": ["normal", "pvp"]},
+    {"id": "tw", "name": "TW", "rulesets": ["normal", "pvp"]}
+  ]
+}

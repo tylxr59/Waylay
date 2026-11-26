@@ -18,4 +18,4 @@ build-backend = "setuptools.build_meta"
 packages = ["waylay"]
 
 [tool.setuptools.package-data]
-waylay = ["template.html"]
+waylay = ["template.html", "logo.svg"]

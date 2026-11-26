@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Waylay Rep Planner</title>
+<link rel="icon" type="image/svg+xml" href="__WAYLAY_ICON__">
 <meta name="description" content="Cheapest Merchant's Favor and Azeroth Commerce Authority / Durotar Supply and Logistics reputation in WoW Forever, from TradeSkillMaster prices.">
 <style>
 :root {
@@ -53,7 +54,9 @@ a:hover { text-decoration-color: currentColor; }
 header.top { padding: 28px 0 8px; }
 [hidden] { display: none !important; }
 .brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-h1 { font-size: 28px; line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: 28px; line-height: 1.15; margin: 0; letter-spacing: -0.01em; display: flex; align-items: center; gap: 10px; }
+h1 .logo { width: 40px; height: 40px; flex: none; }
+h1 .logo title { display: none; }
 .sub { color: var(--ink-2); margin: 6px 0 0; max-width: 72ch; }
 .controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 18px 0 8px; }
 .controls label, .field label { font-size: 13px; color: var(--ink-2); display: flex; align-items: center; gap: 8px; }
@@ -154,13 +157,15 @@ footer p { margin: 4px 0; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 button.link { all: unset; cursor: pointer; color: var(--ink-2); font-size: 12.5px; text-decoration: underline; text-underline-offset: 2px; }
 </style>
+<script>const whTooltips = { colorLinks: false, iconizeLinks: true, renameLinks: false, iconSize: "tiny" };</script>
+<script src="https://wow.zamimg.com/js/tooltips.js" async></script>
 </head>
 <body>
 <div class="tip" id="tip" role="tooltip"></div>
 <div class="wrap">
   <header class="top">
     <div class="brand">
-      <h1>Waylay</h1>
+      <h1><!--__WAYLAY_LOGO__-->Waylay</h1>
       <span class="meta" id="metaLine"></span>
     </div>
     <p class="sub">The cheapest way to earn <b>Merchant's Favor</b> and <b id="facName">Azeroth Commerce Authority</b> reputation in WoW Forever, priced from today's TradeSkillMaster data.</p>
@@ -169,6 +174,8 @@ button.link { all: unset; cursor: pointer; color: var(--ink-2); font-size: 12.5p
         <button type="button" data-fac="alliance" aria-pressed="true">Alliance</button>
         <button type="button" data-fac="horde" aria-pressed="false">Horde</button>
       </div>
+      <label id="regionWrap" hidden>Region <select id="region"></select></label>
+      <label id="rulesetWrap" hidden>Ruleset <select id="ruleset"></select></label>
       <label>Price basis <select id="basis"></select></label>
       <span class="meta" id="basisHelp"></span>
     </div>
@@ -259,7 +266,7 @@ button.link { all: unset; cursor: pointer; color: var(--ink-2); font-size: 12.5p
 
   <footer>
     <p>Pricing data from <a href="https://tradeskillmaster.com" rel="noopener">TradeSkillMaster</a>. Waylay is not affiliated with or endorsed by TradeSkillMaster or Blizzard.</p>
-    <p>Game data: Wowhead WoW Forever guides and database, Method.gg guides, and player reports. Edit <code>data/*.json</code> to correct anything.</p>
+    <p>Game data: <a href="https://www.wowhead.com/forever" rel="noopener">Wowhead</a> WoW Forever guides and database, Method.gg guides, and player reports. Item, quest and NPC links open Wowhead and show its tooltips on hover. Edit <code>data/*.json</code> to correct anything.</p>
     <p id="footMeta"></p>
   </footer>
 </div>
@@ -299,6 +306,15 @@ function money(c, opts = {}) {
   else out = cp + "c";
   return (neg ? "−" : "") + out;
 }
+/* ---------- Wowhead links (tooltips.js adds hover tooltips + icons) ---------- */
+const WH = "https://www.wowhead.com/forever/";
+const wh = (type, id, text) => id ? el("a", { href: `${WH}${type}=${id}`, target: "_blank", rel: "noopener" }, text) : text;
+const whSearch = text => el("a", { href: `${WH}search?q=${encodeURIComponent(text)}`, target: "_blank", rel: "noopener", title: "Search Wowhead" }, text);
+let whPending = false;
+function whRefresh() {
+  if (whPending) return; whPending = true;
+  requestAnimationFrame(() => { whPending = false; try { window.$WowheadPower?.refreshLinks(); } catch {} });
+}
 const fmtInt = n => n == null ? "–" : Math.round(n).toLocaleString();
 const fmtSpd = n => n == null ? "–" : n >= 100 ? Math.round(n).toLocaleString() : n >= 10 ? n.toFixed(0) : n.toFixed(1);
 const roundHalfEven = x => { const f = Math.floor(x), d = x - f; if (Math.abs(d - 0.5) < 1e-9) return f % 2 === 0 ? f : f + 1; return Math.round(x); };
@@ -307,9 +323,23 @@ const roundHalfEven = x => { const f = Math.floor(x), d = x - f; if (Math.abs(d 
 const F = R.faction;
 const STANDINGS = F.standings;
 const CUM = {}; { let t = 0; for (const s of STANDINGS) { CUM[s.name] = t; t += s.size; } }
+/* ---------- pages: one per region / ruleset / faction ---------- */
+const NAV = R.meta.nav && R.meta.nav.sources.length > 1 ? R.meta.nav : null;
+const HERE = NAV ? NAV.sources.find(s => s.id === NAV.current) : null;
+function goTo(s) {
+  if (!s || s.id === HERE.id) return;
+  store.set("source", s.id);
+  location.href = NAV.root + s.path;
+}
+if (NAV) {  // the main page remembers where you were last and sends you back there
+  const saved = NAV.sources.find(s => s.id === store.get("source", null));
+  if (NAV.root === "" && saved && saved.id !== HERE.id) location.replace(saved.path);
+  else store.set("source", HERE.id);
+}
+
 const state = {
   basis: store.get("basis", R.meta.bases[0].key),
-  fac: store.get("fac", "alliance"),
+  fac: R.meta.faction || store.get("fac", "alliance"),
 };
 if (!R.bases[state.basis]) state.basis = R.meta.bases[0].key;
 const B = () => R.bases[state.basis];
@@ -436,6 +466,7 @@ function table(tbl, cols, rows, sortState, onSort, rowClass) {
   const tbody = el("tbody", {}, sorted.map(r => el("tr", { class: rowClass ? rowClass(r) : null },
     cols.map(c => { const v = c.render ? c.render(r) : r[c.key]; return el("td", { class: [c.num ? "num" : "", c.wrap ? "wrap" : ""].join(" ").trim() || null }, v == null ? "–" : v); }))));
   tbl.replaceChildren(thead, tbody);
+  whRefresh();
 }
 function sorter(key, dir, rerender) {
   const s = { key, dir };
@@ -576,7 +607,7 @@ function renderPlanner() {
   if (wrows.length) {
     const t = el("table");
     table(t, [
-      { key: "name", label: "Writ", render: x => el("span", {}, x.w.name, x.w.verified ? null : [" ", el("span", { class: "badge warn", text: "unverified" })]) },
+      { key: "name", label: "Writ", render: x => writName(x.w) },
       { key: "tier", label: "Tier", render: x => x.w.tier },
       { key: "n", label: "×", num: true, render: x => x.n },
       { key: "each", label: "Net each", num: true, render: x => money(x.w.net) },
@@ -587,9 +618,9 @@ function renderPlanner() {
   if (r.fills.length) {
     const t = el("table");
     table(t, [
-      { key: "crate", label: "Crate", render: x => x.o.crate },
+      { key: "crate", label: "Crate", render: x => wh("item", x.o.crateId, x.o.crate) },
       { key: "n", label: "×", num: true, render: x => x.n },
-      { key: "fill", label: "Fill with", render: x => `${x.o.qty * x.n} × ${x.o.item}` },
+      { key: "fill", label: "Fill with", render: x => el("span", {}, `${x.o.qty * x.n} × `, wh("item", x.o.itemId, x.o.item)) },
       { key: "fav", label: "Favor", num: true, render: x => fmtInt(x.n * x.o.favor) },
       { key: "cost", label: "Cost", num: true, render: x => money(x.n * x.o.total) },
     ], r.fills, {}, () => {});
@@ -598,20 +629,25 @@ function renderPlanner() {
   if (r.empties.length) {
     const t = el("table");
     table(t, [
-      { key: "c", label: "Empty crate", render: x => x.c.name.replace("Waylaid Crate: ", "") },
+      { key: "c", label: "Empty crate", render: x => wh("item", x.c.itemId, x.c.name.replace("Waylaid Crate: ", "")) },
       { key: "n", label: "×", num: true, render: x => fmtInt(x.n) },
       { key: "each", label: "Each", num: true, render: x => money(x.c.price) },
     ], r.empties, {}, () => {});
-    parts.push(el("details", { class: "shop" }, el("summary", { text: `Empty crates + ${fmtInt(r.receipts)} Forged Delivery Receipts` }),
+    parts.push(el("details", { class: "shop" }, el("summary", {}, `Empty crates + ${fmtInt(r.receipts)} `, wh("item", F.receipt.itemId, "Forged Delivery Receipts")),
       el("p", { class: "meta", text: `Buy ${fmtInt(r.receipts)} receipts from the Uncertified Scribe (${fmtInt(r.receipts * F.receipt.favor)} Favor), apply one to each empty crate, then hand them in.` }),
       el("div", { class: "tablewrap", style: "max-height:320px" }, t)));
   }
   host.replaceChildren(...parts);
 }
 
+function writName(w) {
+  return el("span", {}, wh("item", w.itemId, w.name), w.verified ? null : [" ", el("span", { class: "badge warn", title: "Requirement assumed: 1 × the named item", text: "unverified" })]);
+}
 function handIn(w) {
-  if (!w.zone && !w.npc) return el("span", { class: "muted", text: "unknown" });
-  return el("span", {}, [w.npc, w.zone].filter(Boolean).join(", "), w.coords ? el("span", { class: "muted", text: ` (${w.coords})` }) : null);
+  const quest = w.questId ? [" · ", wh("quest", w.questId, "quest")] : null;
+  if (!w.zone && !w.npc) return el("span", { class: "muted" }, "unknown", quest);
+  const npc = w.npc ? (w.npcId ? wh(w.npcType || "npc", w.npcId, w.npc) : whSearch(w.npc)) : null;
+  return el("span", {}, npc, w.npc && w.zone ? ", " : "", w.zone || "", w.coords ? el("span", { class: "muted", text: ` (${w.coords})` }) : null, quest);
 }
 
 function setupPlanner() {
@@ -653,11 +689,11 @@ function renderFavor() {
   const overall = [...bestPer.values()].sort((a, c) => a[key] - c[key])[0];
   if (fSort.key === "perFavor" || fSort.key === "perFavorOwned") fSort.key = key;
   table($("#favorTable"), [
-    { key: "crate", label: "Crate", render: o => el("span", {}, o.crate, o.note ? [" ", el("span", { class: "badge warn", title: o.note, text: "check qty" })] : null) },
+    { key: "crate", label: "Crate", render: o => el("span", {}, wh("item", o.crateId, o.crate), o.note ? [" ", el("span", { class: "badge warn", title: o.note, text: "check qty" })] : null) },
     { key: "tier", label: "Tier", sortVal: o => ["Apprentice", "Journeyman", "Expert", "Artisan"].indexOf(o.tier) },
     { key: "reqLevel", label: "Lvl", num: true },
     { key: "favor", label: "Favor", num: true },
-    { key: "item", label: "Fill with", render: o => `${o.qty} × ${o.item}` },
+    { key: "item", label: "Fill with", render: o => el("span", {}, `${o.qty} × `, wh("item", o.itemId, o.item)) },
     { key: "unit", label: "Each", num: true, render: o => money(o.unit) },
     { key: "deal", label: "vs usual", num: true, render: o => dealCell(o.deal) },
     { key: "matCost", label: "Materials", num: true, render: o => money(o.matCost) },
@@ -682,13 +718,13 @@ function renderWrits() {
     (!q || [w.name, w.zone, w.npc, ...w.items.map(i => i.name)].join(" ").toLowerCase().includes(q)));
   const best = rows.filter(w => w.perRep != null).sort((a, c) => a.perRep - c.perRep)[0];
   table($("#writTable"), [
-    { key: "name", label: "Writ", render: w => el("span", {}, w.name, w.verified ? null : [" ", el("span", { class: "badge warn", title: "Requirement assumed: 1 × the named item", text: "unverified" })]) },
+    { key: "name", label: "Writ", render: w => writName(w) },
     { key: "tier", label: "Tier", sortVal: w => w.rep },
     { key: "rep", label: "Rep", num: true },
     { key: "prof", label: "Profession", sortVal: w => w.professions.join(), render: w => w.professions.join(", ") },
     { key: "zone", label: "Hand in", wrap: true, render: w => handIn(w) },
     { key: "writPrice", label: "Writ", num: true, render: w => money(w.writPrice) },
-    { key: "itemCost", label: "Item", num: true, render: w => el("span", { title: w.items.map(i => `${i.qty} × ${i.name}`).join(", ") }, w.items[0].qty > 1 ? `${w.items[0].qty}× ` : "", money(w.itemCost)) },
+    { key: "itemCost", label: "Item", num: true, render: w => el("span", {}, w.items[0].qty > 1 ? `${w.items[0].qty}× ` : "", wh("item", w.items[0].itemId, money(w.itemCost))) },
     { key: "deal", label: "Item vs usual", num: true, sortVal: w => w.items[0].deal, render: w => dealCell(w.items[0].deal) },
     { key: "coin", label: "Pouch", num: true, render: w => el("span", { class: "muted", text: "−" + money(w.coin) }) },
     { key: "net", label: "Net", num: true, render: w => money(w.net) },
@@ -730,12 +766,15 @@ function renderHistory() {
 /* ---------- notes ---------- */
 function renderNotes() {
   const items = [
-    ["Prices", `TSM ${R.meta.source.label}. Region data averages every realm in the region, so a single realm can be cheaper or pricier. Pass --realm to the build for one realm's prices.`],
+    ["Prices", R.meta.faction
+      ? `TSM ${R.meta.source.label}: this ruleset's ${R.meta.faction === "horde" ? "Horde" : "Alliance"} auction house only. Switch faction, ruleset or region at the top.`
+      : `TSM ${R.meta.source.label}. This averages every ruleset and both factions in the region, so your own auction house can be cheaper or pricier. Pick your ruleset at the top for its prices.`],
     ["Price basis", "Market value is TSM's recent fair price. Avg sale price is what items actually sold for. Historical is the longer-term average and makes a good \"normal\" baseline."],
     ["Favor", "Crate cost + materials ÷ Favor paid. Filled crates pay Favor only, no rep (except your first crate's one-time Shipping Label)."],
     ["Writs", "Writ price + requested item − average Coin Pouch. Journeyman 75, Expert 125, Artisan 200 rep. Each specific writ can be done once per day."],
     ["Receipts", `From Friendly, a Forged Delivery Receipt (${F.receipt.favor} Favor) turns any empty Waylaid Crate into +${F.receipt.rep} rep, so its cost is ${F.receipt.favor} × the cheapest Favor + the cheapest crate.`],
-    ["Sales volume", "\"Sold/day\" is TSM's sales-per-day stat. The planner uses it to stop assuming you can buy hundreds of something at today's price."],
+    ["Sales volume", "\"Sold/day\" is TSM's sales-per-day stat. The planner uses it to stop assuming you can buy hundreds of something at today's price." +
+      (R.meta.volumeFrom === "region" ? " TSM only publishes it region-wide, so on this page it's the whole region's sales. One auction house sells less, so treat the caps as generous." : "")],
     ["Writ data", `Every writ's requirement was checked against its Wowhead quest objective. All want 1 item except Crafted Solid Shot (200).${R.meta.unverifiedWrits ? ` ${R.meta.unverifiedWrits} writs are still unverified and assumed to want 1 of the named item.` : ""} Hand-in coordinates are zone map % and only shown where the guide had no location.`],
   ];
   $("#notesBody").replaceChildren(el("dl", { style: "margin:0;display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;font-size:14px" },
@@ -750,14 +789,41 @@ function setFaction(f) {
 }
 function renderAll() { renderTiles(); renderPlanner(); renderFavor(); renderWrits(); }
 
+function setupSourceMenus() {
+  if (!NAV) return;
+  const src = NAV.sources, rs = $("#region"), ru = $("#ruleset");
+  const regions = [...new Map(src.map(s => [s.region, s.regionName])).entries()];
+  rs.append(...regions.map(([id, name]) => el("option", { value: id, text: name, selected: id === HERE.region })));
+  const rulesets = [...new Map(src.filter(s => s.region === HERE.region).map(s => [s.ruleset || "", s.rulesetName || "All rulesets"])).entries()];
+  ru.append(...rulesets.map(([id, name]) => el("option", { value: id, text: name, selected: id === (HERE.ruleset || "") })));
+  if (rulesets.length < 2) ru.disabled = true;
+  // best page for a region + ruleset, keeping the current faction when it can
+  const pick = (region, ruleset) => {
+    const c = src.filter(s => s.region === region && (s.ruleset || "") === ruleset);
+    return c.find(s => !s.faction || s.faction === state.fac) || c[0] || src.find(s => s.region === region && !s.ruleset);
+  };
+  rs.addEventListener("change", () => goTo(pick(rs.value, HERE.ruleset || "")));
+  ru.addEventListener("change", () => goTo(pick(HERE.region, ru.value)));
+  $("#regionWrap").hidden = $("#rulesetWrap").hidden = false;
+}
+function chooseFaction(f) {
+  // ruleset pages are per faction: switching faction means switching page
+  if (HERE && HERE.faction && f !== HERE.faction) {
+    const other = NAV.sources.find(s => s.region === HERE.region && s.ruleset === HERE.ruleset && s.faction === f);
+    if (other) { store.set("fac", f); return goTo(other); }
+  }
+  setFaction(f);
+}
+
 function init() {
   const m = R.meta;
+  setupSourceMenus();
   $("#metaLine").textContent = `${m.source.label} · TSM scan ${m.tsmUpdatedAt ? m.tsmUpdatedAt.replace("T", " ").slice(0, 16) + " UTC" : "unknown"}`;
   $("#footMeta").textContent = `Built ${m.generated.replace("T", " ")} UTC.`;
   const bs = $("#basis");
   bs.append(...m.bases.map(b => el("option", { value: b.key, text: b.label, selected: b.key === state.basis })));
   bs.addEventListener("change", () => { state.basis = bs.value; store.set("basis", bs.value); renderAll(); });
-  document.querySelectorAll("[data-fac]").forEach(b => b.addEventListener("click", () => setFaction(b.dataset.fac)));
+  document.querySelectorAll("[data-fac]").forEach(b => b.addEventListener("click", () => chooseFaction(b.dataset.fac)));
   setFaction(state.fac in F.factions ? state.fac : "alliance");
   if (!m.unverifiedWrits) for (const id of ["pUnverified", "wVerified"]) $("#" + id).closest("label").hidden = true;
   if (m.unverifiedWrits) {

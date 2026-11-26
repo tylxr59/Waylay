@@ -1,9 +1,8 @@
 name: Daily report
 
-# Builds the report from TSM's public data once a day, commits that day's price
-# snapshot to history/, and publishes the page to GitHub Pages.
-# Optional repository variables: TSM_REGION (default "us"), TSM_REALM (realm slug;
-# unset = region-wide prices).
+# Builds one page per region/ruleset in data/sources.json from TSM's public data
+# once a day, commits that day's price snapshots to history/, and publishes the
+# pages to GitHub Pages.
 
 on:
   schedule:
@@ -36,13 +35,7 @@ jobs:
         run: python -m unittest discover -s tests
 
       - name: Build report
-        env:
-          TSM_REGION: ${{ vars.TSM_REGION || 'us' }}
-          TSM_REALM: ${{ vars.TSM_REALM }}
-        run: |
-          args=(--region "$TSM_REGION")
-          if [ -n "$TSM_REALM" ]; then args+=(--realm "$TSM_REALM"); fi
-          python -m waylay build "${args[@]}" --out site
+        run: python -m waylay build --all --out site
 
       - name: Commit price snapshot
         run: |

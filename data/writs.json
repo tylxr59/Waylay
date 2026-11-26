@@ -1060,7 +1060,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "33.6, 75.2"
+      "coords": "33.6, 75.2",
+      "npcId": 5598
     },
     {
       "itemId": 264092,
@@ -1141,7 +1142,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "44.0, 7.2"
+      "coords": "44.0, 7.2",
+      "npcId": 3000
     },
     {
       "itemId": 264094,
@@ -1242,7 +1244,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "41.1, 58.5"
+      "coords": "41.1, 58.5",
+      "npcId": 262294
     },
     {
       "itemId": 264063,
@@ -1584,7 +1587,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "67.5, 51.7"
+      "coords": "67.5, 51.7",
+      "npcId": 257437
     },
     {
       "itemId": 264090,
@@ -1985,7 +1989,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "80.1, 55.5"
+      "coords": "80.1, 55.5",
+      "npcId": 262388
     },
     {
       "itemId": 264085,
@@ -2046,7 +2051,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "62.3, 52.8"
+      "coords": "62.3, 52.8",
+      "npcId": 262306
     },
     {
       "itemId": 264095,
@@ -2287,7 +2293,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "11–15, 26–34"
+      "coords": "11–15, 26–34",
+      "npcId": 11140
     },
     {
       "itemId": 264139,
@@ -2308,7 +2315,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "60.0, 62.0"
+      "coords": "60.0, 62.0",
+      "npcId": 249235
     },
     {
       "itemId": 264121,
@@ -2349,7 +2357,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "61.6, 37.8"
+      "coords": "61.6, 37.8",
+      "npcId": 11183
     },
     {
       "itemId": 264159,
@@ -2370,7 +2379,9 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "49.9, 77.5"
+      "coords": "49.9, 77.5",
+      "npcId": 642497,
+      "npcType": "object"
     },
     {
       "itemId": 264120,
@@ -2431,7 +2442,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "70–80, 54–64"
+      "coords": "70–80, 54–64",
+      "npcId": 11038
     },
     {
       "itemId": 264144,
@@ -2474,7 +2486,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "12.5, 31.5"
+      "coords": "12.5, 31.5",
+      "npcId": 14437
     },
     {
       "itemId": 264135,
@@ -2495,7 +2508,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "52.4, 34.7"
+      "coords": "52.4, 34.7",
+      "npcId": 7363
     },
     {
       "itemId": 264149,
@@ -2556,7 +2570,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "62.9, 43.1"
+      "coords": "62.9, 43.1",
+      "npcId": 261992
     },
     {
       "itemId": 264136,
@@ -2577,7 +2592,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "38.2, 35.5"
+      "coords": "38.2, 35.5",
+      "npcId": 257673
     },
     {
       "itemId": 264122,
@@ -2598,7 +2614,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "82.0, 18.0"
+      "coords": "82.0, 18.0",
+      "npcId": 11805
     },
     {
       "itemId": 264123,
@@ -2619,7 +2636,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "59.5, 53.1"
+      "coords": "59.5, 53.1",
+      "npcId": 262024
     },
     {
       "itemId": 264134,
@@ -2680,7 +2698,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "38.2, 35.5"
+      "coords": "38.2, 35.5",
+      "npcId": 257673
     },
     {
       "itemId": 264116,
@@ -2741,7 +2760,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "30.0, 40.2"
+      "coords": "30.0, 40.2",
+      "npcId": 11705
     },
     {
       "itemId": 264153,
@@ -2802,7 +2822,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "38.0, 72.5"
+      "coords": "38.0, 72.5",
+      "npcId": 262016
     },
     {
       "itemId": 264146,
@@ -2863,7 +2884,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "65.5, 75.9"
+      "coords": "65.5, 75.9",
+      "npcId": 262033
     },
     {
       "itemId": 264160,
@@ -2884,7 +2906,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "57.6, 88.2"
+      "coords": "57.6, 88.2",
+      "npcId": 262044
     },
     {
       "itemId": 264142,
@@ -2925,7 +2948,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "48.8, 37.0"
+      "coords": "48.8, 37.0",
+      "npcId": 15175
     },
     {
       "itemId": 264155,
@@ -2986,7 +3010,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "72–82, 50–60"
+      "coords": "72–82, 50–60",
+      "npcId": 11536
     },
     {
       "itemId": 264143,
@@ -3027,7 +3052,8 @@
         }
       ],
       "requiresSource": "wowhead-quest",
-      "coords": "30.0, 40.2"
+      "coords": "30.0, 40.2",
+      "npcId": 11707
     }
   ]
 }

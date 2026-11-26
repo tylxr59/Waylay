@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 from waylay import analysis, history, tsm
-from waylay.build import ROOT, build, load_data
+from waylay.build import ROOT, build, build_all, load_data, with_region_volume
 from waylay.render import render
 
 FACTION = json.loads((ROOT / "data" / "faction.json").read_text(encoding="utf-8"))
@@ -91,6 +91,8 @@ class Pipeline(unittest.TestCase):
     def test_render_escapes_script_close(self):
         html = render({"x": "</script><b>"})
         self.assertNotIn("</script><b>", html)
+        self.assertNotIn("__WAYLAY_", html)  # logo + favicon filled in
+        self.assertIn('rel="icon" type="image/svg+xml" href="data:image/svg+xml,', html)
 
     def test_repo_data_is_consistent(self):
         data = load_data(ROOT / "data")
@@ -102,6 +104,38 @@ class Pipeline(unittest.TestCase):
         for w in data["writs"]:
             self.assertEqual(w["rep"], FACTION["writRepByTier"][w["tier"]])
             self.assertTrue(all(r["itemId"] for r in w["requires"]), w["name"])
+
+    def test_build_all_sources(self):
+        import urllib.error
+        realm_csv = ("itemId,name,marketValue,minBuyout,recent,historical,updatedAt\n"
+                     "10,Copper Ore,90,95,95,100,2026-11-26T18:00:00Z\n")
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            (d / "sources.json").write_text(json.dumps({"default": "us", "rulesetNames": {"roleplay-pvp": "RP-PvP"},
+                "regions": [{"id": "us", "name": "US", "rulesets": ["roleplay-pvp"]},
+                            {"id": "eu", "name": "EU"}, {"id": "kr", "name": "KR", "rulesets": ["roleplay-pvp"]}]}),
+                encoding="utf-8")
+
+            def fetch(src):
+                if src.region == "kr" and not src.realm:
+                    raise urllib.error.HTTPError(src.url, 404, "Not Found", None, None)
+                if src.region == "kr":
+                    return "itemId,name,marketValue\n"  # empty file
+                return realm_csv if src.realm else CSV
+
+            reports = build_all(d / "sources.json", out_dir=d / "site", data_dir=ROOT / "data",
+                                history_dir=d / "history", fetch=fetch)
+            self.assertEqual(list(reports), ["us", "us-roleplay-pvp-alliance", "us-roleplay-pvp-horde", "eu"])
+            self.assertTrue((d / "site" / "index.html").exists())
+            self.assertTrue((d / "site" / "us-roleplay-pvp-horde" / "index.html").exists())
+            meta = reports["us-roleplay-pvp-alliance"]["meta"]
+            self.assertEqual(meta["source"]["label"], "US · RP-PvP · Alliance")
+            self.assertEqual((meta["faction"], meta["volumeFrom"], meta["nav"]["root"]), ("alliance", "region", "../"))
+            self.assertEqual(meta["nav"]["sources"][0]["path"], "index.html")
+            # ruleset price, region sold/day
+            merged = with_region_volume(tsm.parse(realm_csv)[0], tsm.parse(CSV)[0])
+            self.assertEqual((merged[10].market, merged[10].sold_per_day), (90, 300))
+            self.assertTrue((d / "history" / "forever-us-roleplay-pvp-alliance").is_dir())
 
     def test_build_end_to_end(self):
         with tempfile.TemporaryDirectory() as d:

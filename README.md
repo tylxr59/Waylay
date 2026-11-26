@@ -1,3 +1,5 @@
+<p align="center"><img src="waylay/logo.svg" alt="" width="96" height="96"></p>
+
 <h1 align="center">Waylay</h1>
 
 <p align="center">
@@ -30,6 +32,7 @@ The Commerce Authority grind has three moving parts. **Waylaid Crates** pay Favo
 | 📜 **Writ table** | All 150 writs: writ + item − coin pouch, cost per 1,000 rep, hand-in NPC/zone. Filter by tier, profession, zone. |
 | 🧭 **Rep planner** | Current standing → target, Legacy bonus, extra Favor to spend. Mixes writs and receipts by price and returns a shopping list. |
 | 📉 **Volume-aware** | Caps purchases at TSM's sold-per-day, so the plan doesn't assume 900 Gold Power Cores at today's price. |
+| 🔗 **Wowhead links** | Every crate, material, writ, quest and known hand-in NPC links to Wowhead, with its tooltip on hover. |
 | 🕰️ **History** | Saves a daily price snapshot to `history/` and charts cheapest Favor and rep cost over time. |
 
 ## 📋 Requirements
@@ -54,6 +57,7 @@ python -m waylay summary -n 15
 
 | Option | Meaning |
 | --- | --- |
+| `--all` | Build every region, ruleset and faction in [`data/sources.json`](data/sources.json), one page each. This is what the daily Action runs. |
 | `--region us` | TSM region slug (`us`, `eu`, `kr`, `tw`). |
 | `--realm <slug>` | One realm's prices instead of the region average. The slug is the last part of the realm's URL on tradeskillmaster.com. |
 | `--csv items.csv` | Use a downloaded TSM `items.csv` instead of fetching. |
@@ -65,17 +69,19 @@ python -m waylay summary -n 15
 [`.github/workflows/report.yml`](.github/workflows/report.yml) runs every day at 10:17 UTC. It runs the tests, builds the report, commits the day's snapshot to `history/`, and deploys `site/` to Pages. To turn it on:
 
 1. **Settings → Pages → Source: GitHub Actions.**
-2. Optional: **Settings → Variables → Actions**, set `TSM_REALM` (and `TSM_REGION` if not US).
-3. **Actions → Daily report → Run workflow** for the first build.
+2. **Actions → Daily report → Run workflow** for the first build.
+
+US (all rulesets) is the main page. Every region also gets a page per ruleset and faction, since Forever auction houses are split that way: Normal, PvP, RP and RP-PvP for US and EU, Normal and PvP for KR and TW. Pick them with the Region, Ruleset and Alliance/Horde controls at the top; the main page remembers your last pick. [`data/sources.json`](data/sources.json) lists what gets built. TSM only publishes sold/day region-wide, so ruleset pages borrow the region's numbers for the planner's volume caps.
 
 ## ✏️ Correcting game data
 
-All game knowledge lives in three JSON files. Fix a number there and the next build picks it up.
+All game knowledge lives in JSON files under `data/`. Fix a number there and the next build picks it up.
 
 | File | Holds |
 | --- | --- |
 | [`data/crates.json`](data/crates.json) | 30 crates: tier, Favor paid, fill options (item id + qty). |
 | [`data/writs.json`](data/writs.json) | 150 writs: tier, rep, hand-in NPC/zone, required item + qty. Set `"requiresSource": "wowhead-quest"` once a requirement is confirmed. |
+| [`data/sources.json`](data/sources.json) | Regions and rulesets to build pages for. |
 | [`data/faction.json`](data/faction.json) | Standing sizes, receipt rules, first-crate bonus, Legacy bonus, coin pouch averages, Favor rewards. |
 
 ## 🩺 Troubleshooting

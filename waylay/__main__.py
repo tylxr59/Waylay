@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 from . import analysis, tsm
-from .build import ROOT, build, load_data
+from .build import ROOT, build, build_all, load_data
 
 
 def money(c: float | None) -> str:
@@ -37,11 +37,23 @@ def main(argv: list[str] | None = None) -> int:
             p.add_argument("--out", type=Path, default=ROOT / "site")
             p.add_argument("--history", type=Path, default=ROOT / "history")
             p.add_argument("--no-snapshot", action="store_true", help="Don't write today's prices to history/")
+            p.add_argument("--all", action="store_true",
+                           help="Build every region/ruleset in data/sources.json (ignores --region/--realm/--csv)")
         else:
             p.add_argument("--basis", default="market", choices=list(analysis.BASES))
             p.add_argument("-n", type=int, default=10, help="Rows per table")
     args = ap.parse_args(argv)
     src = tsm.Source(args.game, args.region, args.realm)
+
+    if args.cmd == "build" and args.all:
+        reports = build_all(args.data / "sources.json", out_dir=args.out, data_dir=args.data,
+                            history_dir=args.history, snapshot=not args.no_snapshot)
+        for r in reports.values():
+            s, nav = r["bases"]["market"]["summary"], r["meta"]["nav"]
+            here = next(x for x in nav["sources"] if x["id"] == nav["current"])
+            best = money(s["bestFavor"]["perFavor"]) if s["bestFavor"] else "-"
+            print(f"Wrote {args.out / here['path']} ({here['label']}): cheapest Favor {best}")
+        return 0
 
     if args.cmd == "build":
         report = build(src, csv_path=args.csv, out_dir=args.out, data_dir=args.data,

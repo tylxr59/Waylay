@@ -136,6 +136,8 @@ def writ_rows(writs: list[dict], pr: Pricer, pouch: dict[str, int]) -> list[dict
             "npc": w.get("npc"),
             "zone": w.get("zone"),
             "coords": w.get("coords"),
+            "npcId": w.get("npcId"),
+            "npcType": w.get("npcType", "npc"),
             "verified": w.get("requiresSource") == "wowhead-quest",
             "writPrice": writ_price,
             "writSoldPerDay": writ_spd,
