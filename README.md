@@ -1,23 +1,10 @@
-<!--
-  Template checklist (delete this comment when done):
-  1. Replace every PROJECT, OWNER/PROJECT and placeholder sentence below.
-  2. Add a square logo at assets/logo.png and a screenshot at assets/screenshot.png.
-  3. Fill in the build steps in .github/workflows/release.yml.
-  4. Set the repo description and topics on GitHub, and delete sections that don't apply.
--->
+<h1 align="center">Waylay</h1>
 
 <p align="center">
-  <img src="assets/logo.png" alt="PROJECT logo" width="112" height="112">
-</p>
-
-<h1 align="center">PROJECT</h1>
-
-<p align="center">
-  One sentence that says what PROJECT is and who it's for.
+  The cheapest way to earn <b>Merchant's Favor</b> and <b>Azeroth Commerce Authority / Durotar Supply and Logistics</b> reputation in WoW Forever, priced daily from TradeSkillMaster data.
 </p>
 
 <p align="center">
-  <a href="https://github.com/OWNER/PROJECT/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/OWNER/PROJECT?display_name=tag&sort=semver"></a>
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-97ca00"></a>
 </p>
 
@@ -25,66 +12,91 @@
   <a href="#-features">Features</a> ·
   <a href="#-quick-start">Quick start</a> ·
   <a href="#-usage">Usage</a> ·
-  <a href="#-troubleshooting">Troubleshooting</a>
+  <a href="#-correcting-game-data">Correcting game data</a>
 </p>
 
 ---
 
-Two or three sentences on what problem PROJECT solves and why it exists.
-
-<p align="center">
-  <img src="assets/screenshot.png" alt="PROJECT screenshot" width="720">
-</p>
+The Commerce Authority grind has three moving parts. **Waylaid Crates** pay Favor and accept any one of several materials. **Craftsman's Writs** give rep but can only be done once a day each. From Friendly, **Forged Delivery Receipts** turn Favor and an empty crate into rep. Which mix is cheapest depends on today's auction house. Waylay prices every crate fill, writ and receipt from TSM's public data and builds a single HTML page: sortable tables, charts, and a planner that takes you from your current standing to a target standing for the least gold.
 
 > [!NOTE]
-> Optional: what PROJECT intentionally doesn't do, or its current status.
+> Game data was checked against Wowhead for WoW Forever 1.60.1: every writ's quest objective, all 30 crate tooltips, and the receipt and coin pouch numbers. Nine writs still have no known hand-in location. Elite crates aren't covered.
 
 ## 🎯 Features
 
-| Feature            | What it does                       |
-| ------------------ | ---------------------------------- |
-| 🧩 **Feature one** | What it does, in one short clause. |
-| ⚡ **Feature two** | What it does, in one short clause. |
+| Feature | What it does |
+| --- | --- |
+| 📦 **Favor table** | Every crate × material option, cost per Favor, "vs usual" price, and fills/day the market can support. |
+| 📜 **Writ table** | All 150 writs: writ + item − coin pouch, cost per 1,000 rep, hand-in NPC/zone. Filter by tier, profession, zone. |
+| 🧭 **Rep planner** | Current standing → target, Legacy bonus, extra Favor to spend. Mixes writs and receipts by price and returns a shopping list. |
+| 📉 **Volume-aware** | Caps purchases at TSM's sold-per-day, so the plan doesn't assume 900 Gold Power Cores at today's price. |
+| 🕰️ **History** | Saves a daily price snapshot to `history/` and charts cheapest Favor and rep cost over time. |
 
 ## 📋 Requirements
 
-- The platform, runtime, or hardware PROJECT runs on.
-- Anything the user must install or configure first.
+- Python 3.11+ (standard library only, no packages to install).
+- Internet access to `public-data.tradeskillmaster.com`.
 
 ## 🚀 Quick start
 
-The shortest path from nothing to a working install.
+```sh
+python -m waylay build          # fetch US region prices, write site/index.html
+xdg-open site/index.html         # or open it in any browser
+```
+
+Quick terminal answer, no HTML:
 
 ```sh
-# install command
+python -m waylay summary -n 15
 ```
 
 ## 🧭 Usage
 
-How to use PROJECT once it's installed: controls, common tasks, configuration.
+| Option | Meaning |
+| --- | --- |
+| `--region us` | TSM region slug (`us`, `eu`, `kr`, `tw`). |
+| `--realm <slug>` | One realm's prices instead of the region average. The slug is the last part of the realm's URL on tradeskillmaster.com. |
+| `--csv items.csv` | Use a downloaded TSM `items.csv` instead of fetching. |
+| `--no-snapshot` | Don't write today's prices to `history/`. |
+| `summary --basis sale` | Price basis: `market`, `sale` (avg sale price, region data), `buyout` (min buyout, realm data), `historical`. |
+
+### Daily page on GitHub Pages
+
+[`.github/workflows/report.yml`](.github/workflows/report.yml) runs every day at 10:17 UTC. It runs the tests, builds the report, commits the day's snapshot to `history/`, and deploys `site/` to Pages. To turn it on:
+
+1. **Settings → Pages → Source: GitHub Actions.**
+2. Optional: **Settings → Variables → Actions**, set `TSM_REALM` (and `TSM_REGION` if not US).
+3. **Actions → Daily report → Run workflow** for the first build.
+
+## ✏️ Correcting game data
+
+All game knowledge lives in three JSON files. Fix a number there and the next build picks it up.
+
+| File | Holds |
+| --- | --- |
+| [`data/crates.json`](data/crates.json) | 30 crates: tier, Favor paid, fill options (item id + qty). |
+| [`data/writs.json`](data/writs.json) | 150 writs: tier, rep, hand-in NPC/zone, required item + qty. Set `"requiresSource": "wowhead-quest"` once a requirement is confirmed. |
+| [`data/faction.json`](data/faction.json) | Standing sizes, receipt rules, first-crate bonus, Legacy bonus, coin pouch averages, Favor rewards. |
 
 ## 🩺 Troubleshooting
 
-| Symptom          | Fix                  |
-| ---------------- | -------------------- |
-| What goes wrong. | What to check or do. |
+| Symptom | Fix |
+| --- | --- |
+| `HTTP Error 404` with `--realm` | The slug is wrong. Copy it from the realm's URL on tradeskillmaster.com. |
+| A row shows `–` | TSM has no price for that item (nothing listed or sold). It's left out of the planner. |
+| Planner warns about sales volume | You asked for more than normally sells in that many days. Raise **Days** or untick **Stay within normal sales volume**. |
 
 ## 👋 Development
 
 ```sh
-# set up, test, and build from source
+python -m unittest discover -s tests
 ```
-
-Bug reports and contributions are welcome through [GitHub Issues](https://github.com/OWNER/PROJECT/issues).
-
-## 📦 Releases
-
-Push a `v<version>` tag that matches the project version. The [release workflow](.github/workflows/release.yml) builds PROJECT and publishes a [GitHub Release](https://github.com/OWNER/PROJECT/releases) with generated release notes.
 
 ## 🤝 Acknowledgements
 
-Projects and people PROJECT builds on.
+- Pricing data from [TradeSkillMaster](https://tradeskillmaster.com) public data. Waylay is not affiliated with or endorsed by TSM.
+- Game data from [Wowhead](https://www.wowhead.com/forever)'s WoW Forever guides and database, [Method.gg](https://www.method.gg/wow-forever) guides, and players reporting in guide comments.
 
 ## 📃 License
 
-PROJECT is available under the [MIT License](LICENSE).
+Waylay is available under the [MIT License](LICENSE).

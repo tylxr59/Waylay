@@ -1,0 +1,3033 @@
+{
+  "_source": "Wowhead Craftsman's Writs guide + every writ's quest objective, checked 2026-11-26 (WoW Forever 1.60.1). Coordinates are zone map %, given only where the guide lacked a hand-in.",
+  "writs": [
+    {
+      "itemId": 264049,
+      "name": "Craftsman's Writ: Azure Silk Hood",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Journeyman",
+      "npc": "Cowardly Peon",
+      "zone": "Ashenvale",
+      "questId": 94249,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 7048,
+          "name": "Azure Silk Hood",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264045,
+      "name": "Craftsman's Writ: Barbaric Gloves",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Journeyman",
+      "npc": "Goblin Pit Boss",
+      "zone": "Thousand Needles",
+      "questId": 94245,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4254,
+          "name": "Barbaric Gloves",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264036,
+      "name": "Craftsman's Writ: Big Bronze Bomb",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Journeyman",
+      "npc": "Razzeric",
+      "zone": "Thousand Needles",
+      "questId": 94236,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4380,
+          "name": "Big Bronze Bomb",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264027,
+      "name": "Craftsman's Writ: Big Bronze Knife",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Journeyman",
+      "npc": "\"Plucky\" Johnson",
+      "zone": "Thousand Needles",
+      "questId": 94227,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 3848,
+          "name": "Big Bronze Knife",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264048,
+      "name": "Craftsman's Writ: Blue Overalls",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Journeyman",
+      "npc": "Alyce",
+      "zone": "Arathi Highlands",
+      "questId": 94248,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 6263,
+          "name": "Blue Overalls",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264053,
+      "name": "Craftsman's Writ: Colorful Kilt",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Journeyman",
+      "npc": "Hekshi",
+      "zone": "Stranglethorn Vale",
+      "questId": 94253,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 10048,
+          "name": "Colorful Kilt",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264037,
+      "name": "Craftsman's Writ: Crafted Solid Shot",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kixxle",
+      "zone": "Wetlands",
+      "questId": 94237,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 8069,
+          "name": "Crafted Solid Shot",
+          "qty": 200
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264044,
+      "name": "Craftsman's Writ: Dark Leather Shoulders",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Journeyman",
+      "npc": "Narkk",
+      "zone": "Stranglethorn Vale",
+      "questId": 94244,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4252,
+          "name": "Dark Leather Shoulders",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264041,
+      "name": "Craftsman's Writ: Dark Leather Tunic",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kzixx",
+      "zone": "Duskwood",
+      "questId": 94241,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 2317,
+          "name": "Dark Leather Tunic",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264019,
+      "name": "Craftsman's Writ: Draught of Water Breathing",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kixxle",
+      "zone": "Wetlands",
+      "questId": 94219,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 5996,
+          "name": "Draught of Water Breathing",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264018,
+      "name": "Craftsman's Writ: Elixir of Defense",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Journeyman",
+      "npc": "Rizzle Brassbolts",
+      "zone": "Thousand Needles",
+      "questId": 94218,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 8951,
+          "name": "Elixir of Defense",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264016,
+      "name": "Craftsman's Writ: Elixir of Lesser Agility",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Journeyman",
+      "npc": "Ziz Fizziks",
+      "zone": "Stonetalon Mountains",
+      "questId": 94216,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 3390,
+          "name": "Elixir of Lesser Agility",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264011,
+      "name": "Craftsman's Writ: Elixir of Ogre's Strength",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Journeyman",
+      "npc": "Sos'mol",
+      "zone": "Alterac Mountains",
+      "questId": 94004,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 3391,
+          "name": "Elixir of Ogre Strength",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264012,
+      "name": "Craftsman's Writ: Elixir of Wisdom",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Journeyman",
+      "npc": "Muggol Breezebeard",
+      "zone": "Arathi Highlands",
+      "questId": 94212,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 3383,
+          "name": "Elixir of Wisdom",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264030,
+      "name": "Craftsman's Writ: Explosive Sheep",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Journeyman",
+      "npc": "Alyce",
+      "zone": "Arathi Highlands",
+      "questId": 94230,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4384,
+          "name": "Explosive Sheep",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264039,
+      "name": "Craftsman's Writ: Fine Leather Pants",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Journeyman",
+      "npc": "Alyce",
+      "zone": "Arathi Highlands",
+      "questId": 94239,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 5958,
+          "name": "Fine Leather Pants",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264015,
+      "name": "Craftsman's Writ: Free Action Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Journeyman",
+      "npc": "Webbed Mudsnout Gnoll",
+      "zone": "Hillsbrad Foothills",
+      "questId": 94215,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 5634,
+          "name": "Free Action Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264035,
+      "name": "Craftsman's Writ: Gnomish Universal Remote",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Journeyman",
+      "npc": "Scooty",
+      "zone": "Stranglethorn Vale",
+      "questId": 94235,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 7506,
+          "name": "Gnomish Universal Remote",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264021,
+      "name": "Craftsman's Writ: Golden Rod",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Journeyman",
+      "npc": "Muggol Breezebeard",
+      "zone": "Arathi Highlands",
+      "questId": 94221,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 11128,
+          "name": "Golden Rod",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264054,
+      "name": "Craftsman's Writ: Greater Adept's Robe",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Journeyman",
+      "npc": "Magus Tirth",
+      "zone": "Thousand Needles",
+      "questId": 94254,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 6264,
+          "name": "Greater Adept's Robe",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264028,
+      "name": "Craftsman's Writ: Green Iron Boots",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kixxle",
+      "zone": "Wetlands",
+      "questId": 94228,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 3484,
+          "name": "Green Iron Boots",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264026,
+      "name": "Craftsman's Writ: Green Iron Gauntlets",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Journeyman",
+      "npc": "\"Sea Wolf\" MacKinley",
+      "zone": "Stranglethorn Vale",
+      "questId": 94226,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 3485,
+          "name": "Green Iron Gauntlets",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264024,
+      "name": "Craftsman's Writ: Heavy Bronze Mace",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Journeyman",
+      "npc": "Gorgrash",
+      "zone": "Hillsbrad Foothills",
+      "questId": 94224,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 3491,
+          "name": "Heavy Bronze Mace",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264038,
+      "name": "Craftsman's Writ: Heavy Leather Ball",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Journeyman",
+      "npc": "Sos'mol",
+      "zone": "Alterac Mountains",
+      "questId": 94238,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 18662,
+          "name": "Heavy Leather Ball",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264043,
+      "name": "Craftsman's Writ: Heavy Quiver",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Journeyman",
+      "npc": "Ziz Fizziks",
+      "zone": "Stonetalon Mountains",
+      "questId": 94243,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 7371,
+          "name": "Heavy Quiver",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264040,
+      "name": "Craftsman's Writ: Herbalist's Gloves",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Journeyman",
+      "npc": "Murache",
+      "zone": "Ashenvale",
+      "questId": 94240,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 7349,
+          "name": "Herbalist's Gloves",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264022,
+      "name": "Craftsman's Writ: Iridescent Hammer",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Journeyman",
+      "npc": "Cowardly Peon",
+      "zone": "Ashenvale",
+      "questId": 94222,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 5541,
+          "name": "Iridescent Hammer",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264013,
+      "name": "Craftsman's Writ: Lesser Mana Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Journeyman",
+      "npc": "Ash'alari",
+      "zone": "Ashenvale",
+      "questId": 94213,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 3385,
+          "name": "Lesser Mana Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264017,
+      "name": "Craftsman's Writ: Lesser Troll's Blood Elixir",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Journeyman",
+      "npc": "Short John Mithril",
+      "zone": "Stranglethorn Vale",
+      "questId": 94217,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 3388,
+          "name": "Lesser Troll's Blood Elixir",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264047,
+      "name": "Craftsman's Writ: Lesser Wizard's Robe",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Journeyman",
+      "npc": "Alan Sneeks",
+      "zone": "Alterac Mountains",
+      "questId": 94247,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 5766,
+          "name": "Lesser Wizard's Robe",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264032,
+      "name": "Craftsman's Writ: Minor Recombobulator",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kzixx",
+      "zone": "Duskwood",
+      "questId": 94232,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4381,
+          "name": "Minor Recombobulator",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264031,
+      "name": "Craftsman's Writ: Moonsight Rifle",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Journeyman",
+      "npc": "Grembly",
+      "zone": "Ashenvale",
+      "questId": 94231,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4383,
+          "name": "Moonsight Rifle",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264029,
+      "name": "Craftsman's Writ: Ornate Spyglass",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Journeyman",
+      "npc": "Alan Sneeks",
+      "zone": "Alterac Mountains",
+      "questId": 94229,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 5507,
+          "name": "Ornate Spyglass",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264020,
+      "name": "Craftsman's Writ: Pearl-Handled Dagger",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Journeyman",
+      "npc": "Alan Sneeks",
+      "zone": "Alterac Mountains",
+      "questId": 94220,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 5540,
+          "name": "Pearl-handled Dagger",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264051,
+      "name": "Craftsman's Writ: Phoenix Pants",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Journeyman",
+      "npc": "Bath'rah the Windwatcher",
+      "zone": "Alterac Mountains",
+      "questId": 94251,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4317,
+          "name": "Phoenix Pants",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264042,
+      "name": "Craftsman's Writ: Pilferer's Gloves",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kris Legace",
+      "zone": "Hillsbrad Foothills",
+      "questId": 94242,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 7358,
+          "name": "Pilferer's Gloves",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264033,
+      "name": "Craftsman's Writ: Practice Lock",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Journeyman",
+      "npc": "Gorgrash",
+      "zone": "Hillsbrad Foothills",
+      "questId": 94233,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 6712,
+          "name": "Practice Lock",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264046,
+      "name": "Craftsman's Writ: Red Whelp Gloves",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kixxle",
+      "zone": "Wetlands",
+      "questId": 94246,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 7284,
+          "name": "Red Whelp Gloves",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264052,
+      "name": "Craftsman's Writ: Red Woolen Boots",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Journeyman",
+      "npc": "Ziz Fizziks",
+      "zone": "Stonetalon Mountains",
+      "questId": 94252,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4313,
+          "name": "Red Woolen Boots",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264025,
+      "name": "Craftsman's Writ: Rough Bronze Leggings",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Journeyman",
+      "npc": "Ziz Fizziks",
+      "zone": "Stonetalon Mountains",
+      "questId": 94225,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 2865,
+          "name": "Rough Bronze Leggings",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264034,
+      "name": "Craftsman's Writ: Shadow Goggles",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Journeyman",
+      "npc": "Ziz Fizziks",
+      "zone": "Stonetalon Mountains",
+      "questId": 94234,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4373,
+          "name": "Shadow Goggles",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264014,
+      "name": "Craftsman's Writ: Shadow Protection Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kzixx",
+      "zone": "Duskwood",
+      "questId": 94214,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 6048,
+          "name": "Shadow Protection Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264023,
+      "name": "Craftsman's Writ: Silver Skeleton Key",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Journeyman",
+      "npc": "Battered Trunk",
+      "zone": "Duskwood",
+      "questId": 94223,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 15869,
+          "name": "Silver Skeleton Key",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264050,
+      "name": "Craftsman's Writ: Small Silk Pack",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kzixx",
+      "zone": "Duskwood",
+      "questId": 94250,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4245,
+          "name": "Small Silk Pack",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264055,
+      "name": "Craftsman's Writ: Spider Silk Slippers",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Journeyman",
+      "npc": "Kixxle",
+      "zone": "Wetlands",
+      "questId": 94255,
+      "rep": 75,
+      "requires": [
+        {
+          "itemId": 4321,
+          "name": "Spider Silk Slippers",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264081,
+      "name": "Craftsman's Writ: Advanced Target Dummy",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Bibbly F'utzbuckle",
+      "zone": "Desolace",
+      "questId": 94281,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 4392,
+          "name": "Advanced Target Dummy",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264100,
+      "name": "Craftsman's Writ: Big Voodoo Mask",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Mukomonji",
+      "zone": "Swamp of Sorrows",
+      "questId": 94300,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8201,
+          "name": "Big Voodoo Mask",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264101,
+      "name": "Craftsman's Writ: Big Voodoo Robe",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Yeh'kinya",
+      "zone": "Tanaris",
+      "questId": 94301,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8200,
+          "name": "Big Voodoo Robe",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264110,
+      "name": "Craftsman's Writ: Black Mageweave Vest",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Spek",
+      "zone": "Riverglades",
+      "questId": 94310,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 9998,
+          "name": "Black Mageweave Vest",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264072,
+      "name": "Craftsman's Writ: Blue Glittering Axe",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Scout Raroul",
+      "zone": "Feralas",
+      "questId": 94272,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7942,
+          "name": "Blue Glittering Axe",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264060,
+      "name": "Craftsman's Writ: Catseye Draught",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Scout Raroul",
+      "zone": "Feralas",
+      "questId": 94260,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10592,
+          "name": "Catseye Draught",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264084,
+      "name": "Craftsman's Writ: Catseye Ultra Goggles",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Scout Raroul",
+      "zone": "Feralas",
+      "questId": 94284,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10501,
+          "name": "Catseye Ultra Goggles",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264114,
+      "name": "Craftsman's Writ: Cindercloth Robe",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Atal'ai Exile",
+      "zone": "The Hinterlands",
+      "questId": 94314,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10042,
+          "name": "Cindercloth Robe",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "33.6, 75.2"
+    },
+    {
+      "itemId": 264092,
+      "name": "Craftsman's Writ: Comfortable Leather Hat",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Garek",
+      "zone": "Badlands",
+      "questId": 94292,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8174,
+          "name": "Comfortable Leather Hat",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264082,
+      "name": "Craftsman's Writ: Craftsman's Monocle",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "The Ravenous",
+      "zone": "Dustwallow Marsh",
+      "questId": 94282,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 4393,
+          "name": "Craftsman's Monocle",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264106,
+      "name": "Craftsman's Writ: Crimson Silk Robe",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Tabetha",
+      "zone": "Dustwallow Marsh",
+      "questId": 94306,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7063,
+          "name": "Crimson Silk Robe",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264091,
+      "name": "Craftsman's Writ: Dark Iron Bomb",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Gibbert",
+      "zone": "Un'Goro Crater",
+      "questId": 94291,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 16005,
+          "name": "Dark Iron Bomb",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "44.0, 7.2"
+    },
+    {
+      "itemId": 264094,
+      "name": "Craftsman's Writ: Dusky Bracers",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "The Ravenous",
+      "zone": "Dustwallow Marsh",
+      "questId": 94294,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7378,
+          "name": "Dusky Bracers",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264115,
+      "name": "Craftsman's Writ: Earthen Silk Belt",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Petra Grossen",
+      "zone": "Un'Goro Crater",
+      "questId": 94315,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7061,
+          "name": "Earthen Silk Belt",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264066,
+      "name": "Craftsman's Writ: Elixir of Agility",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Juo",
+      "zone": "The Hinterlands",
+      "questId": 94266,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8949,
+          "name": "Elixir of Agility",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264108,
+      "name": "Craftsman's Writ: Enchanted Mageweave Pouch",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Impsy",
+      "zone": "Felwood",
+      "questId": 94308,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 22246,
+          "name": "Enchanted Mageweave Pouch",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264087,
+      "name": "Craftsman's Writ: Fire Goggles",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Durganon",
+      "zone": "Searing Gorge",
+      "questId": 94287,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10500,
+          "name": "Fire Goggles",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "41.1, 58.5"
+    },
+    {
+      "itemId": 264063,
+      "name": "Craftsman's Writ: Fire Protection Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Durganon",
+      "zone": "Searing Gorge",
+      "questId": 94263,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 6049,
+          "name": "Fire Protection Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264086,
+      "name": "Craftsman's Writ: Flash Bomb",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Spek",
+      "zone": "Riverglades",
+      "questId": 94286,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 4852,
+          "name": "Flash Bomb",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264056,
+      "name": "Craftsman's Writ: Frost Protection Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Lotwil Veriatus",
+      "zone": "Badlands",
+      "questId": 94256,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 6050,
+          "name": "Frost Protection Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264083,
+      "name": "Craftsman's Writ: Goblin Land Mine",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Jessir Moonbow",
+      "zone": "Felwood",
+      "questId": 94283,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 4395,
+          "name": "Goblin Land Mine",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264065,
+      "name": "Craftsman's Writ: Goblin Rocket Fuel",
+      "professions": [
+        "Alchemy",
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Alchemist Pestlezugg",
+      "zone": "Tanaris",
+      "questId": 94265,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 9061,
+          "name": "Goblin Rocket Fuel",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264074,
+      "name": "Craftsman's Writ: Golden Scale Coif",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Spek",
+      "zone": "Riverglades",
+      "questId": 94274,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 3837,
+          "name": "Golden Scale Coif",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264078,
+      "name": "Craftsman's Writ: Golden Scale Gauntlets",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Gilveradin Sunchaser",
+      "zone": "The Hinterlands",
+      "questId": 94278,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 9366,
+          "name": "Golden Scale Gauntlets",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264061,
+      "name": "Craftsman's Writ: Great Rage Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Dendrite Starblaze",
+      "zone": "Moonglade",
+      "questId": 94261,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 5633,
+          "name": "Great Rage Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264093,
+      "name": "Craftsman's Writ: Guardian Cloak",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Azore Aldamort",
+      "zone": "Desolace",
+      "questId": 94293,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 5965,
+          "name": "Guardian Cloak",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264089,
+      "name": "Craftsman's Writ: Gyromatic Micro-Adjuster",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Jhordy Lapforge",
+      "zone": "Tanaris",
+      "questId": 94289,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10498,
+          "name": "Gyromatic Micro-Adjuster",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264079,
+      "name": "Craftsman's Writ: Heavy Mithril Axe",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Torwa Pathfinder",
+      "zone": "Un'Goro Crater",
+      "questId": 94279,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7941,
+          "name": "Heavy Mithril Axe",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264069,
+      "name": "Craftsman's Writ: Inlaid Mithril Cylinder",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Bibbly F'utzbuckle",
+      "zone": "Desolace",
+      "questId": 94269,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 9060,
+          "name": "Inlaid Mithril Cylinder",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264057,
+      "name": "Craftsman's Writ: Lesser Invisibility Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Centaur Pariah",
+      "zone": "Desolace",
+      "questId": 94257,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 3823,
+          "name": "Lesser Invisibility Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264058,
+      "name": "Craftsman's Writ: Lesser Stoneshield Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Mudcrush Durtfeet",
+      "zone": "Dustwallow Marsh",
+      "questId": 94258,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 4623,
+          "name": "Lesser Stoneshield Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264104,
+      "name": "Craftsman's Writ: Mageweave Bag",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Rigglefuzz",
+      "zone": "Badlands",
+      "questId": 94304,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10050,
+          "name": "Mageweave Bag",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264062,
+      "name": "Craftsman's Writ: Mana Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Spek",
+      "zone": "Riverglades",
+      "questId": 94262,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 3827,
+          "name": "Mana Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264080,
+      "name": "Craftsman's Writ: Mechanical Dragonling",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Garyanne Fleezlebop",
+      "zone": "Badlands",
+      "questId": 94280,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 4396,
+          "name": "Mechanical Dragonling",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "67.5, 51.7"
+    },
+    {
+      "itemId": 264090,
+      "name": "Craftsman's Writ: Mechanical Repair Kit",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Rhapsody Shindigger",
+      "zone": "The Hinterlands",
+      "questId": 94290,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 11590,
+          "name": "Mechanical Repair Kit",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264088,
+      "name": "Craftsman's Writ: Mithril Frag Bomb",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Bullets Bigblast",
+      "zone": "Swamp of Sorrows",
+      "questId": 94288,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10514,
+          "name": "Mithril Frag Bomb",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264073,
+      "name": "Craftsman's Writ: Moonsteel Broadsword",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Meliri",
+      "zone": "Moonglade",
+      "questId": 94273,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 3853,
+          "name": "Moonsteel Broadsword",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264059,
+      "name": "Craftsman's Writ: Nature Protection Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Greta Mosshoof",
+      "zone": "Felwood",
+      "questId": 94259,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 6052,
+          "name": "Nature Protection Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264099,
+      "name": "Craftsman's Writ: Nightscape Shoulders",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Evonice Sootsmoker",
+      "zone": "Searing Gorge",
+      "questId": 94299,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8192,
+          "name": "Nightscape Shoulders",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264112,
+      "name": "Craftsman's Writ: Orange Martial Shirt",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Bullets Bigblast",
+      "zone": "Swamp of Sorrows",
+      "questId": 94312,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10052,
+          "name": "Orange Martial Shirt",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264071,
+      "name": "Craftsman's Writ: Ornate Mithril Shoulders",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Taronn Redfeather",
+      "zone": "Felwood",
+      "questId": 94271,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7928,
+          "name": "Ornate Mithril Shoulders",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264097,
+      "name": "Craftsman's Writ: Quickdraw Quiver",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Narianna <Bowyer>",
+      "zone": "Moonglade",
+      "questId": 94297,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8217,
+          "name": "Quickdraw Quiver",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264111,
+      "name": "Craftsman's Writ: Red Mageweave Pants",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Lookout Captain Lolo Longstriker",
+      "zone": "Searing Gorge",
+      "questId": 94311,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10009,
+          "name": "Red Mageweave Pants",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264064,
+      "name": "Craftsman's Writ: Shadow Oil",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Mukomonji",
+      "zone": "Swamp of Sorrows",
+      "questId": 94264,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 3824,
+          "name": "Shadow Oil",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264105,
+      "name": "Craftsman's Writ: Shadoweave Gloves",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Willow",
+      "zone": "Desolace",
+      "questId": 94305,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10023,
+          "name": "Shadoweave Gloves",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264107,
+      "name": "Craftsman's Writ: Shadoweave Robe",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Eridan Bluewind",
+      "zone": "Felwood",
+      "questId": 94307,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10004,
+          "name": "Shadoweave Robe",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264075,
+      "name": "Craftsman's Writ: Solid Sharpening Stone",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Master Smith Burninate",
+      "zone": "Searing Gorge",
+      "questId": 94275,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7964,
+          "name": "Solid Sharpening Stone",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264109,
+      "name": "Craftsman's Writ: Star Belt",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Mylentha Riverbend",
+      "zone": "Moonglade",
+      "questId": 94309,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 4329,
+          "name": "Star Belt",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264068,
+      "name": "Craftsman's Writ: Steel Plate Helm",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Furious Shadowforge Digger",
+      "zone": "Badlands",
+      "questId": 94268,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7922,
+          "name": "Steel Plate Helm",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264070,
+      "name": "Craftsman's Writ: Steel Weapon Chain",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Ugbert",
+      "zone": "Dustwallow Marsh",
+      "questId": 94270,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 6041,
+          "name": "Steel Weapon Chain",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264098,
+      "name": "Craftsman's Writ: Swift Boots",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Spek",
+      "zone": "Riverglades",
+      "questId": 94298,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7391,
+          "name": "Swift Boots",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264103,
+      "name": "Craftsman's Writ: Thick Leather Ammo Pouch",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Nergal",
+      "zone": "Un'Goro Crater",
+      "questId": 94303,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8218,
+          "name": "Thick Leather Ammo Pouch",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264077,
+      "name": "Craftsman's Writ: Truesilver Rod",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Spigot Operator Luglunket",
+      "zone": "Tanaris",
+      "questId": 94277,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 11144,
+          "name": "Truesilver Rod",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264102,
+      "name": "Craftsman's Writ: Turtle Scale Breastplate",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Juo",
+      "zone": "The Hinterlands",
+      "questId": 94302,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8189,
+          "name": "Turtle Scale Breastplate",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "80.1, 55.5"
+    },
+    {
+      "itemId": 264085,
+      "name": "Craftsman's Writ: Unstable Trigger",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Expert",
+      "npc": "Narianna",
+      "zone": "Moonglade",
+      "questId": 94285,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10560,
+          "name": "Unstable Trigger",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264113,
+      "name": "Craftsman's Writ: White Bandit Mask",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Expert",
+      "npc": "Vizzklick",
+      "zone": "Tanaris",
+      "questId": 94313,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 10008,
+          "name": "White Bandit Mask",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264076,
+      "name": "Craftsman's Writ: Wicked Mithril Blade",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Expert",
+      "npc": "Mukomonji",
+      "zone": "Swamp of Sorrows",
+      "questId": 94276,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 7943,
+          "name": "Wicked Mithril Blade",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "62.3, 52.8"
+    },
+    {
+      "itemId": 264095,
+      "name": "Craftsman's Writ: Wild Leather Helmet",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Ivy Leafrunner",
+      "zone": "Felwood",
+      "questId": 94295,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8214,
+          "name": "Wild Leather Helmet",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264096,
+      "name": "Craftsman's Writ: Wild Leather Shoulders",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Expert",
+      "npc": "Scout Raroul",
+      "zone": "Feralas",
+      "questId": 94296,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 8210,
+          "name": "Wild Leather Shoulders",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264067,
+      "name": "Craftsman's Writ: Wildvine Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Expert",
+      "npc": "Spark Nilminer",
+      "zone": "Un'Goro Crater",
+      "questId": 94267,
+      "rep": 125,
+      "requires": [
+        {
+          "itemId": 9144,
+          "name": "Wildvine Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264132,
+      "name": "Craftsman's Writ: Arcanite Skeleton Key",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": null,
+      "questId": 94332,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15872,
+          "name": "Arcanite Skeleton Key",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264157,
+      "name": "Craftsman's Writ: Cenarion Herb Bag",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": null,
+      "questId": 94357,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 22251,
+          "name": "Cenarion Herb Bag",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264148,
+      "name": "Craftsman's Writ: Chimeric Vest",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Artisan",
+      "npc": "Earthcaller Franzahl",
+      "zone": "Winterspring",
+      "questId": 94348,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15075,
+          "name": "Chimeric Vest",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264130,
+      "name": "Craftsman's Writ: Darkrune Gauntlets",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": null,
+      "questId": 94330,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 20549,
+          "name": "Darkrune Gauntlets",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264124,
+      "name": "Craftsman's Writ: Distilled Firewater",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Artisan",
+      "npc": "Bor'dorc",
+      "zone": "Winterspring",
+      "questId": 94324,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 246948,
+          "name": "Distilled Firewater",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264119,
+      "name": "Craftsman's Writ: Draught of Detect Demon",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Artisan",
+      "npc": "Hastings <The Caretaker>",
+      "zone": "Deadwind Pass",
+      "questId": 94319,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 9233,
+          "name": "Draught of Detect Demon",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264117,
+      "name": "Craftsman's Writ: Dreamless Sleep Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Artisan",
+      "npc": "Kum'isha the Collector",
+      "zone": "Blasted Lands",
+      "questId": 94317,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 12190,
+          "name": "Dreamless Sleep Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264133,
+      "name": "Craftsman's Writ: Ebon Shiv",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Artisan",
+      "npc": "Xizzer Fizzbolt",
+      "zone": "Winterspring",
+      "questId": 94333,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 7947,
+          "name": "Ebon Shiv",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264156,
+      "name": "Craftsman's Writ: Felcloth Boots",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": "Egan",
+      "zone": "Eastern Plaguelands",
+      "questId": 94356,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 14108,
+          "name": "Felcloth Boots",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "11–15, 26–34"
+    },
+    {
+      "itemId": 264139,
+      "name": "Craftsman's Writ: Field Repair Bot 74A",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Artisan",
+      "npc": "Kaylaena Springwhisper",
+      "zone": "Mount Hyjal",
+      "questId": 94339,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 18232,
+          "name": "Field Repair Bot 74A",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "60.0, 62.0"
+    },
+    {
+      "itemId": 264121,
+      "name": "Craftsman's Writ: Flask of Chromatic Resistance",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": null,
+      "questId": 94321,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 13513,
+          "name": "Flask of Chromatic Resistance",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264151,
+      "name": "Craftsman's Writ: Frostsaber Boots",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Artisan",
+      "npc": "Blixxrak",
+      "zone": "Winterspring",
+      "questId": 94351,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15071,
+          "name": "Frostsaber Boots",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "61.6, 37.8"
+    },
+    {
+      "itemId": 264159,
+      "name": "Craftsman's Writ: Ghostweave Vest",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": "An Old Tombstone",
+      "zone": "Western Plaguelands",
+      "questId": 94359,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 14141,
+          "name": "Ghostweave Vest",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "49.9, 77.5"
+    },
+    {
+      "itemId": 264120,
+      "name": "Craftsman's Writ: Gift of Arthas",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Artisan",
+      "npc": "Adon",
+      "zone": "Eastern Plaguelands",
+      "questId": 94320,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 9088,
+          "name": "Gift of Arthas",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264137,
+      "name": "Craftsman's Writ: Gnomish Alarm-O-Bot",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Artisan",
+      "npc": "Hastings <The Caretaker>",
+      "zone": "Deadwind Pass",
+      "questId": 94337,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 18645,
+          "name": "Gnomish Alarm-O-Bot",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264138,
+      "name": "Craftsman's Writ: Goblin Jumper Cables XL",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Artisan",
+      "npc": "Caretaker Alen",
+      "zone": "Eastern Plaguelands",
+      "questId": 94338,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 18587,
+          "name": "Goblin Jumper Cables XL",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "70–80, 54–64"
+    },
+    {
+      "itemId": 264144,
+      "name": "Craftsman's Writ: Gordok Ogre Suit",
+      "professions": [
+        "Leatherworking",
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": "Blasted Lands",
+      "questId": 94344,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 18258,
+          "name": "Gordok Ogre Suit",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "51.9, 35.2"
+    },
+    {
+      "itemId": 264118,
+      "name": "Craftsman's Writ: Greater Fire Protection Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Artisan",
+      "npc": "Gorzeeki Wildeyes",
+      "zone": "Burning Steppes",
+      "questId": 94318,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 13457,
+          "name": "Greater Fire Protection Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "12.5, 31.5"
+    },
+    {
+      "itemId": 264135,
+      "name": "Craftsman's Writ: Green Lens",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Artisan",
+      "npc": "Kum'isha the Collector",
+      "zone": "Blasted Lands",
+      "questId": 94335,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 10504,
+          "name": "Green Lens",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "52.4, 34.7"
+    },
+    {
+      "itemId": 264149,
+      "name": "Craftsman's Writ: Heavy Scorpid Helm",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": null,
+      "questId": 94349,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15080,
+          "name": "Heavy Scorpid Helm",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264131,
+      "name": "Craftsman's Writ: Huge Thorium Battleaxe",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": null,
+      "questId": 94331,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 12775,
+          "name": "Huge Thorium Battleaxe",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264129,
+      "name": "Craftsman's Writ: Imperial Plate Chest",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Artisan",
+      "npc": "Injured Soldier",
+      "zone": "Eastern Plaguelands",
+      "questId": 94329,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 12422,
+          "name": "Imperial Plate Chest",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "62.9, 43.1"
+    },
+    {
+      "itemId": 264136,
+      "name": "Craftsman's Writ: Lifelike Mechanical Toad",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Artisan",
+      "npc": "Ugkragg",
+      "zone": "Burning Steppes",
+      "questId": 94336,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15996,
+          "name": "Lifelike Mechanical Toad",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "38.2, 35.5"
+    },
+    {
+      "itemId": 264122,
+      "name": "Craftsman's Writ: Limited Invulnerability Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Artisan",
+      "npc": "Jarund Stoutstrider",
+      "zone": "Silithus",
+      "questId": 94322,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 3387,
+          "name": "Limited Invulnerability Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "82.0, 18.0"
+    },
+    {
+      "itemId": 264123,
+      "name": "Craftsman's Writ: Major Rejuvenation Potion",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Artisan",
+      "npc": "Kirala Fairgrass",
+      "zone": "Western Plaguelands",
+      "questId": 94323,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 18253,
+          "name": "Major Rejuvenation Potion",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "59.5, 53.1"
+    },
+    {
+      "itemId": 264134,
+      "name": "Craftsman's Writ: Masterwork Target Dummy",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Artisan",
+      "npc": "Rayan Dawnrisen",
+      "zone": "Azshara",
+      "questId": 94334,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 16023,
+          "name": "Masterwork Target Dummy",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264128,
+      "name": "Craftsman's Writ: Mithril Spurs",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Artisan",
+      "npc": "Calliard",
+      "zone": "Deadwind Pass",
+      "questId": 94328,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 7969,
+          "name": "Mithril Spurs",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264127,
+      "name": "Craftsman's Writ: Orcish War Leggings",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Artisan",
+      "npc": "Ugkragg",
+      "zone": "Burning Steppes",
+      "questId": 94327,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 7929,
+          "name": "Orcish War Leggings",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "38.2, 35.5"
+    },
+    {
+      "itemId": 264116,
+      "name": "Craftsman's Writ: Potion of Demonslaying",
+      "professions": [
+        "Alchemy"
+      ],
+      "tier": "Artisan",
+      "npc": "Archmage Xylem",
+      "zone": "Azshara",
+      "questId": 94316,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 9224,
+          "name": "Potion of Demon Slaying",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264126,
+      "name": "Craftsman's Writ: Radiant Belt",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Artisan",
+      "npc": "Kum'isha the Collector",
+      "zone": "Blasted Lands",
+      "questId": 94326,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 12416,
+          "name": "Radiant Belt",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264125,
+      "name": "Craftsman's Writ: Radiant Circlet",
+      "professions": [
+        "Blacksmithing"
+      ],
+      "tier": "Artisan",
+      "npc": "Rayan Dawnrisen",
+      "zone": "Azshara",
+      "questId": 94325,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 12417,
+          "name": "Radiant Circlet",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "30.0, 40.2"
+    },
+    {
+      "itemId": 264153,
+      "name": "Craftsman's Writ: Runecloth Bag",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": "Kum'isha the Collector",
+      "zone": "Blasted Lands",
+      "questId": 94353,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 14046,
+          "name": "Runecloth Bag",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264154,
+      "name": "Craftsman's Writ: Runecloth Boots",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": "Gorzeeki Wildeyes",
+      "zone": "Burning Steppes",
+      "questId": 94354,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 13864,
+          "name": "Runecloth Boots",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264150,
+      "name": "Craftsman's Writ: Runic Leather Bracers",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Artisan",
+      "npc": "Fallen Adventurer",
+      "zone": "Western Plaguelands",
+      "questId": 94350,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15092,
+          "name": "Runic Leather Bracers",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "38.0, 72.5"
+    },
+    {
+      "itemId": 264146,
+      "name": "Craftsman's Writ: Runic Leather Headband",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Artisan",
+      "npc": "Hastings <The Caretaker>",
+      "zone": "Deadwind Pass",
+      "questId": 94346,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15094,
+          "name": "Runic Leather Headband",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264158,
+      "name": "Craftsman's Writ: Shadoweave Mask",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": "Hermit Ortell",
+      "zone": "Silithus",
+      "questId": 94358,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 10025,
+          "name": "Shadoweave Mask",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264141,
+      "name": "Craftsman's Writ: Sniper Scope",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Artisan",
+      "npc": "Suspicious Adventurer",
+      "zone": "Western Plaguelands",
+      "questId": 94341,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 10548,
+          "name": "Sniper Scope",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "65.5, 75.9"
+    },
+    {
+      "itemId": 264160,
+      "name": "Craftsman's Writ: Soul Pouch",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": "Zelizax",
+      "zone": "Winterspring",
+      "questId": 94360,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 21340,
+          "name": "Soul Pouch",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "57.6, 88.2"
+    },
+    {
+      "itemId": 264142,
+      "name": "Craftsman's Writ: Tranquil Mechanical Yeti",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": null,
+      "questId": 94342,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 21277,
+          "name": "Tranquil Mechanical Yeti",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264140,
+      "name": "Craftsman's Writ: Truesilver Transformer",
+      "professions": [
+        "Engineering"
+      ],
+      "tier": "Artisan",
+      "npc": "Khur Hornstriker",
+      "zone": "Silithus",
+      "questId": 94340,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 18631,
+          "name": "Truesilver Transformer",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "48.8, 37.0"
+    },
+    {
+      "itemId": 264155,
+      "name": "Craftsman's Writ: Tuxedo Jacket",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": "Hastings <The Caretaker>",
+      "zone": "Deadwind Pass",
+      "questId": 94355,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 10036,
+          "name": "Tuxedo Jacket",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264145,
+      "name": "Craftsman's Writ: Volcanic Breastplate",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": null,
+      "questId": 94345,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15053,
+          "name": "Volcanic Breastplate",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264147,
+      "name": "Craftsman's Writ: Wicked Leather Bracers",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Artisan",
+      "npc": "Quartermaster Miranda Breechlock",
+      "zone": "Eastern Plaguelands",
+      "questId": 94347,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15084,
+          "name": "Wicked Leather Bracers",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "72–82, 50–60"
+    },
+    {
+      "itemId": 264143,
+      "name": "Craftsman's Writ: Wicked Leather Pants",
+      "professions": [
+        "Leatherworking"
+      ],
+      "tier": "Artisan",
+      "npc": null,
+      "zone": null,
+      "questId": 94343,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 15087,
+          "name": "Wicked Leather Pants",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest"
+    },
+    {
+      "itemId": 264152,
+      "name": "Craftsman's Writ: Wizardweave Turban",
+      "professions": [
+        "Tailoring"
+      ],
+      "tier": "Artisan",
+      "npc": "Joy Ar'nareth",
+      "zone": "Azshara",
+      "questId": 94352,
+      "rep": 200,
+      "requires": [
+        {
+          "itemId": 14130,
+          "name": "Wizardweave Turban",
+          "qty": 1
+        }
+      ],
+      "requiresSource": "wowhead-quest",
+      "coords": "30.0, 40.2"
+    }
+  ]
+}

@@ -1,0 +1,815 @@
+{
+  "_source": "Method.gg crate tables, all 30 checked against Wowhead tooltips 2026-11-26 (WoW Forever 1.60.1). Edit freely.",
+  "crates": [
+    {
+      "itemId": 248682,
+      "name": "Waylaid Crate: Apprentice Herbs",
+      "tier": "Apprentice",
+      "category": "Herbs",
+      "quality": "common",
+      "reqLevel": 10,
+      "favor": 5,
+      "options": [
+        {
+          "itemId": 2447,
+          "name": "Peacebloom",
+          "qty": 20
+        },
+        {
+          "itemId": 765,
+          "name": "Silverleaf",
+          "qty": 20
+        },
+        {
+          "itemId": 2449,
+          "name": "Earthroot",
+          "qty": 10
+        },
+        {
+          "itemId": 785,
+          "name": "Mageroyal",
+          "qty": 10
+        },
+        {
+          "itemId": 2450,
+          "name": "Briarthorn",
+          "qty": 10
+        }
+      ]
+    },
+    {
+      "itemId": 248686,
+      "name": "Waylaid Crate: Journeyman Herbs",
+      "tier": "Journeyman",
+      "category": "Herbs",
+      "quality": "common",
+      "reqLevel": 10,
+      "favor": 10,
+      "options": [
+        {
+          "itemId": 3820,
+          "name": "Stranglekelp",
+          "qty": 10
+        },
+        {
+          "itemId": 2453,
+          "name": "Bruiseweed",
+          "qty": 10
+        },
+        {
+          "itemId": 3355,
+          "name": "Wild Steelbloom",
+          "qty": 10
+        },
+        {
+          "itemId": 3369,
+          "name": "Grave Moss",
+          "qty": 10
+        },
+        {
+          "itemId": 3356,
+          "name": "Kingsblood",
+          "qty": 10
+        }
+      ]
+    },
+    {
+      "itemId": 248690,
+      "name": "Waylaid Crate: Earthly Expert Herbs",
+      "tier": "Expert",
+      "category": "Herbs",
+      "quality": "common",
+      "reqLevel": 20,
+      "favor": 15,
+      "options": [
+        {
+          "itemId": 3357,
+          "name": "Liferoot",
+          "qty": 20
+        },
+        {
+          "itemId": 3818,
+          "name": "Fadeleaf",
+          "qty": 10
+        },
+        {
+          "itemId": 3821,
+          "name": "Goldthorn",
+          "qty": 10
+        },
+        {
+          "itemId": 3358,
+          "name": "Khadgar's Whisker",
+          "qty": 10
+        }
+      ]
+    },
+    {
+      "itemId": 248691,
+      "name": "Waylaid Crate: Flowering Expert Herbs",
+      "tier": "Expert",
+      "category": "Herbs",
+      "quality": "common",
+      "reqLevel": 20,
+      "favor": 15,
+      "options": [
+        {
+          "itemId": 3819,
+          "name": "Wintersbite",
+          "qty": 10
+        },
+        {
+          "itemId": 4625,
+          "name": "Firebloom",
+          "qty": 10
+        },
+        {
+          "itemId": 8831,
+          "name": "Purple Lotus",
+          "qty": 20
+        },
+        {
+          "itemId": 8836,
+          "name": "Arthas' Tears",
+          "qty": 10
+        }
+      ]
+    },
+    {
+      "itemId": 248695,
+      "name": "Waylaid Crate: Earthly Artisan Herbs",
+      "tier": "Artisan",
+      "category": "Herbs",
+      "quality": "common",
+      "reqLevel": 35,
+      "favor": 20,
+      "options": [
+        {
+          "itemId": 13464,
+          "name": "Golden Sansam",
+          "qty": 10
+        },
+        {
+          "itemId": 8838,
+          "name": "Sungrass",
+          "qty": 20
+        },
+        {
+          "itemId": 8839,
+          "name": "Blindweed",
+          "qty": 10
+        },
+        {
+          "itemId": 8845,
+          "name": "Ghost Mushroom",
+          "qty": 10
+        },
+        {
+          "itemId": 8846,
+          "name": "Gromsblood",
+          "qty": 10
+        }
+      ]
+    },
+    {
+      "itemId": 248696,
+      "name": "Waylaid Crate: Flowering Artisan Herbs",
+      "tier": "Artisan",
+      "category": "Herbs",
+      "quality": "common",
+      "reqLevel": 35,
+      "favor": 20,
+      "options": [
+        {
+          "itemId": 13463,
+          "name": "Dreamfoil",
+          "qty": 20
+        },
+        {
+          "itemId": 13465,
+          "name": "Mountain Silversage",
+          "qty": 20
+        },
+        {
+          "itemId": 13466,
+          "name": "Plaguebloom",
+          "qty": 20
+        },
+        {
+          "itemId": 13467,
+          "name": "Icecap",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248683,
+      "name": "Waylaid Crate: Apprentice Ore",
+      "tier": "Apprentice",
+      "category": "Ore",
+      "quality": "common",
+      "reqLevel": 10,
+      "favor": 5,
+      "options": [
+        {
+          "itemId": 2770,
+          "name": "Copper Ore",
+          "qty": 20
+        },
+        {
+          "itemId": 2771,
+          "name": "Tin Ore",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248687,
+      "name": "Waylaid Crate: Journeyman Ore",
+      "tier": "Journeyman",
+      "category": "Ore",
+      "quality": "common",
+      "reqLevel": 10,
+      "favor": 10,
+      "options": [
+        {
+          "itemId": 2775,
+          "name": "Silver Ore",
+          "qty": 10
+        },
+        {
+          "itemId": 2772,
+          "name": "Iron Ore",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248692,
+      "name": "Waylaid Crate: Expert Ore",
+      "tier": "Expert",
+      "category": "Ore",
+      "quality": "common",
+      "reqLevel": 20,
+      "favor": 15,
+      "options": [
+        {
+          "itemId": 2776,
+          "name": "Gold Ore",
+          "qty": 10
+        },
+        {
+          "itemId": 3858,
+          "name": "Mithril Ore",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248697,
+      "name": "Waylaid Crate: Artisan Ore",
+      "tier": "Artisan",
+      "category": "Ore",
+      "quality": "common",
+      "reqLevel": 35,
+      "favor": 20,
+      "options": [
+        {
+          "itemId": 7911,
+          "name": "Truesilver Ore",
+          "qty": 10
+        },
+        {
+          "itemId": 10620,
+          "name": "Thorium Ore",
+          "qty": 20
+        },
+        {
+          "itemId": 11370,
+          "name": "Dark Iron Ore",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248684,
+      "name": "Waylaid Crate: Apprentice Textiles",
+      "tier": "Apprentice",
+      "category": "Textiles",
+      "quality": "common",
+      "reqLevel": 10,
+      "favor": 5,
+      "options": [
+        {
+          "itemId": 2589,
+          "name": "Linen Cloth",
+          "qty": 40
+        },
+        {
+          "itemId": 2318,
+          "name": "Light Leather",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248688,
+      "name": "Waylaid Crate: Journeyman Textiles",
+      "tier": "Journeyman",
+      "category": "Textiles",
+      "quality": "common",
+      "reqLevel": 10,
+      "favor": 10,
+      "options": [
+        {
+          "itemId": 2592,
+          "name": "Wool Cloth",
+          "qty": 20
+        },
+        {
+          "itemId": 4306,
+          "name": "Silk Cloth",
+          "qty": 40
+        },
+        {
+          "itemId": 2319,
+          "name": "Medium Leather",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248693,
+      "name": "Waylaid Crate: Expert Textiles",
+      "tier": "Expert",
+      "category": "Textiles",
+      "quality": "common",
+      "reqLevel": 20,
+      "favor": 15,
+      "options": [
+        {
+          "itemId": 4338,
+          "name": "Mageweave Cloth",
+          "qty": 40
+        },
+        {
+          "itemId": 4234,
+          "name": "Heavy Leather",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248698,
+      "name": "Waylaid Crate: Artisan Textiles",
+      "tier": "Artisan",
+      "category": "Textiles",
+      "quality": "common",
+      "reqLevel": 35,
+      "favor": 20,
+      "options": [
+        {
+          "itemId": 14047,
+          "name": "Runecloth",
+          "qty": 40
+        },
+        {
+          "itemId": 4304,
+          "name": "Thick Leather",
+          "qty": 20
+        },
+        {
+          "itemId": 8170,
+          "name": "Rugged Leather",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248685,
+      "name": "Waylaid Crate: Apprentice Curiosities",
+      "tier": "Apprentice",
+      "category": "Curiosities",
+      "quality": "common",
+      "reqLevel": 10,
+      "favor": 5,
+      "options": [
+        {
+          "itemId": 10940,
+          "name": "Strange Dust",
+          "qty": 20
+        },
+        {
+          "itemId": 10939,
+          "name": "Greater Magic Essence",
+          "qty": 4
+        },
+        {
+          "itemId": 10978,
+          "name": "Small Glimmering Shard",
+          "qty": 6
+        },
+        {
+          "itemId": 11084,
+          "name": "Large Glimmering Shard",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "itemId": 248689,
+      "name": "Waylaid Crate: Journeyman Curiosities",
+      "tier": "Journeyman",
+      "category": "Curiosities",
+      "quality": "common",
+      "reqLevel": 10,
+      "favor": 10,
+      "options": [
+        {
+          "itemId": 11083,
+          "name": "Soul Dust",
+          "qty": 20
+        },
+        {
+          "itemId": 11082,
+          "name": "Greater Astral Essence",
+          "qty": 4
+        },
+        {
+          "itemId": 11138,
+          "name": "Small Glowing Shard",
+          "qty": 6
+        },
+        {
+          "itemId": 11139,
+          "name": "Large Glowing Shard",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "itemId": 248694,
+      "name": "Waylaid Crate: Expert Curiosities",
+      "tier": "Expert",
+      "category": "Curiosities",
+      "quality": "common",
+      "reqLevel": 20,
+      "favor": 15,
+      "options": [
+        {
+          "itemId": 11137,
+          "name": "Vision Dust",
+          "qty": 20
+        },
+        {
+          "itemId": 11135,
+          "name": "Greater Mystic Essence",
+          "qty": 4
+        },
+        {
+          "itemId": 11177,
+          "name": "Small Radiant Shard",
+          "qty": 6
+        },
+        {
+          "itemId": 11178,
+          "name": "Large Radiant Shard",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "itemId": 248699,
+      "name": "Waylaid Crate: Artisan Curiosities",
+      "tier": "Artisan",
+      "category": "Curiosities",
+      "quality": "common",
+      "reqLevel": 35,
+      "favor": 20,
+      "options": [
+        {
+          "itemId": 11176,
+          "name": "Dream Dust",
+          "qty": 20
+        },
+        {
+          "itemId": 11175,
+          "name": "Greater Nether Essence",
+          "qty": 4
+        },
+        {
+          "itemId": 14343,
+          "name": "Small Brilliant Shard",
+          "qty": 6
+        },
+        {
+          "itemId": 14344,
+          "name": "Large Brilliant Shard",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "itemId": 248703,
+      "name": "Waylaid Crate: Apprentice Ingots",
+      "tier": "Apprentice",
+      "category": "Ingots",
+      "quality": "uncommon",
+      "reqLevel": 10,
+      "favor": 10,
+      "options": [
+        {
+          "itemId": 2840,
+          "name": "Copper Bar",
+          "qty": 20
+        },
+        {
+          "itemId": 3576,
+          "name": "Tin Bar",
+          "qty": 20
+        },
+        {
+          "itemId": 2841,
+          "name": "Bronze Bar",
+          "qty": 10
+        }
+      ]
+    },
+    {
+      "itemId": 248706,
+      "name": "Waylaid Crate: Journeyman Ingots",
+      "tier": "Journeyman",
+      "category": "Ingots",
+      "quality": "uncommon",
+      "reqLevel": 10,
+      "favor": 20,
+      "options": [
+        {
+          "itemId": 2842,
+          "name": "Silver Bar",
+          "qty": 10
+        },
+        {
+          "itemId": 3575,
+          "name": "Iron Bar",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248709,
+      "name": "Waylaid Crate: Expert Ingots",
+      "tier": "Expert",
+      "category": "Ingots",
+      "quality": "uncommon",
+      "reqLevel": 20,
+      "favor": 30,
+      "options": [
+        {
+          "itemId": 3860,
+          "name": "Mithril Bar",
+          "qty": 20
+        },
+        {
+          "itemId": 3859,
+          "name": "Steel Bar",
+          "qty": 15
+        },
+        {
+          "itemId": 3577,
+          "name": "Gold Bar",
+          "qty": 10
+        }
+      ]
+    },
+    {
+      "itemId": 248712,
+      "name": "Waylaid Crate: Artisan Ingots",
+      "tier": "Artisan",
+      "category": "Ingots",
+      "quality": "uncommon",
+      "reqLevel": 35,
+      "favor": 40,
+      "options": [
+        {
+          "itemId": 11371,
+          "name": "Dark Iron Bar",
+          "qty": 2
+        },
+        {
+          "itemId": 6037,
+          "name": "Truesilver Bar",
+          "qty": 10
+        },
+        {
+          "itemId": 12359,
+          "name": "Thorium Bar",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248704,
+      "name": "Waylaid Crate: Apprentice Parts",
+      "tier": "Apprentice",
+      "category": "Parts",
+      "quality": "uncommon",
+      "reqLevel": 10,
+      "favor": 10,
+      "options": [
+        {
+          "itemId": 4359,
+          "name": "Handful of Copper Bolts",
+          "qty": 16
+        },
+        {
+          "itemId": 4361,
+          "name": "Copper Tube",
+          "qty": 16
+        },
+        {
+          "itemId": 4363,
+          "name": "Copper Modulator",
+          "qty": 4
+        }
+      ]
+    },
+    {
+      "itemId": 248707,
+      "name": "Waylaid Crate: Journeyman Parts",
+      "tier": "Journeyman",
+      "category": "Parts",
+      "quality": "uncommon",
+      "reqLevel": 10,
+      "favor": 20,
+      "options": [
+        {
+          "itemId": 4371,
+          "name": "Bronze Tube",
+          "qty": 8
+        },
+        {
+          "itemId": 4375,
+          "name": "Whirring Bronze Gizmo",
+          "qty": 7
+        },
+        {
+          "itemId": 4382,
+          "name": "Bronze Framework",
+          "qty": 4
+        },
+        {
+          "itemId": 10558,
+          "name": "Gold Power Core",
+          "qty": 45
+        }
+      ]
+    },
+    {
+      "itemId": 248710,
+      "name": "Waylaid Crate: Expert Parts",
+      "tier": "Expert",
+      "category": "Parts",
+      "quality": "uncommon",
+      "reqLevel": 20,
+      "favor": 30,
+      "options": [
+        {
+          "itemId": 4387,
+          "name": "Iron Strut",
+          "qty": 8
+        },
+        {
+          "itemId": 10559,
+          "name": "Mithril Tube",
+          "qty": 5
+        },
+        {
+          "itemId": 10560,
+          "name": "Unstable Trigger",
+          "qty": 12
+        },
+        {
+          "itemId": 10561,
+          "name": "Mithril Casing",
+          "qty": 5
+        }
+      ]
+    },
+    {
+      "itemId": 248713,
+      "name": "Waylaid Crate: Artisan Parts",
+      "tier": "Artisan",
+      "category": "Parts",
+      "quality": "uncommon",
+      "reqLevel": 35,
+      "favor": 40,
+      "options": [
+        {
+          "itemId": 15994,
+          "name": "Thorium Widget",
+          "qty": 5
+        },
+        {
+          "itemId": 18631,
+          "name": "Truesilver Transformer",
+          "qty": 5
+        },
+        {
+          "itemId": 16000,
+          "name": "Thorium Tube",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "itemId": 248702,
+      "name": "Waylaid Crate: Apprentice Fabrics",
+      "tier": "Apprentice",
+      "category": "Fabrics",
+      "quality": "uncommon",
+      "reqLevel": 10,
+      "favor": 10,
+      "options": [
+        {
+          "itemId": 4231,
+          "name": "Cured Light Hide",
+          "qty": 2
+        },
+        {
+          "itemId": 2996,
+          "name": "Bolt of Linen Cloth",
+          "qty": 20
+        }
+      ]
+    },
+    {
+      "itemId": 248705,
+      "name": "Waylaid Crate: Journeyman Fabrics",
+      "tier": "Journeyman",
+      "category": "Fabrics",
+      "quality": "uncommon",
+      "reqLevel": 10,
+      "favor": 20,
+      "options": [
+        {
+          "itemId": 2997,
+          "name": "Bolt of Woolen Cloth",
+          "qty": 6
+        },
+        {
+          "itemId": 4305,
+          "name": "Bolt of Silk Cloth",
+          "qty": 10
+        },
+        {
+          "itemId": 4233,
+          "name": "Cured Medium Hide",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "itemId": 248708,
+      "name": "Waylaid Crate: Expert Fabrics",
+      "tier": "Expert",
+      "category": "Fabrics",
+      "quality": "uncommon",
+      "reqLevel": 20,
+      "favor": 30,
+      "options": [
+        {
+          "itemId": 4339,
+          "name": "Bolt of Mageweave",
+          "qty": 8
+        },
+        {
+          "itemId": 4236,
+          "name": "Cured Heavy Hide",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "itemId": 248711,
+      "name": "Waylaid Crate: Artisan Fabrics",
+      "tier": "Artisan",
+      "category": "Fabrics",
+      "quality": "uncommon",
+      "reqLevel": 35,
+      "favor": 40,
+      "options": [
+        {
+          "itemId": 14048,
+          "name": "Bolt of Runecloth",
+          "qty": 8
+        },
+        {
+          "itemId": 8172,
+          "name": "Cured Thick Hide",
+          "qty": 2
+        }
+      ]
+    }
+  ]
+}
