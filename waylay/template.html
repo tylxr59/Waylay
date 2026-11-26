@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waylay Rep Planner</title>
+<meta name="description" content="Cheapest Merchant's Favor and Azeroth Commerce Authority / Durotar Supply and Logistics reputation in WoW Forever, from TradeSkillMaster prices.">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f6f6f4;
+  --surface: #ffffff;
+  --surface-2: #f1f1ee;
+  --ink: #191919;
+  --ink-2: #5f5f5f;
+  --ink-3: #8a8a8a;
+  --line: #e4e4e0;
+  --axis: #c2c2c2;
+  --accent: #8a5a00;
+  --accent-wash: #fbf1dc;
+  --good: #006c10;
+  --bad: #b3261e;
+  --warn-ink: #7a4b00;
+  --warn-wash: #fff4d6;
+  --s1: #257de0; --s2: #f47230; --s3: #00b894; --s4: #f2a600;
+  --ring: rgba(11,11,11,.10);
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0e0e0d; --surface: #191919; --surface-2: #222220; --ink: #efefef; --ink-2: #a3a3a3; --ink-3: #7a7a7a;
+    --line: #2e2e2c; --axis: #474747; --accent: #f0b54a; --accent-wash: #2b2210; --good: #53c556; --bad: #ff8a80;
+    --warn-ink: #f6c86b; --warn-wash: #2c2410;
+    --s1: #338ced; --s2: #e76624; --s3: #00a888; --s4: #d28e05; --ring: rgba(255,255,255,.10);
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0e0e0d; --surface: #191919; --surface-2: #222220; --ink: #efefef; --ink-2: #a3a3a3; --ink-3: #7a7a7a;
+  --line: #2e2e2c; --axis: #474747; --accent: #f0b54a; --accent-wash: #2b2210; --good: #53c556; --bad: #ff8a80;
+  --warn-ink: #f6c86b; --warn-wash: #2c2410;
+  --s1: #338ced; --s2: #e76624; --s3: #00a888; --s4: #d28e05; --ring: rgba(255,255,255,.10);
+  --shadow: none;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: inherit; text-decoration-color: var(--ink-3); text-underline-offset: 2px; }
+a:hover { text-decoration-color: currentColor; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+header.top { padding: 28px 0 8px; }
+[hidden] { display: none !important; }
+.brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+h1 { font-size: 28px; line-height: 1.15; margin: 0; letter-spacing: -0.01em; }
+.sub { color: var(--ink-2); margin: 6px 0 0; max-width: 72ch; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 18px 0 8px; }
+.controls label, .field label { font-size: 13px; color: var(--ink-2); display: flex; align-items: center; gap: 8px; }
+select, input[type=number], input[type=search] {
+  font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 10px; min-height: 34px;
+}
+input[type=number] { width: 7.5em; }
+input[type=checkbox] { accent-color: var(--accent); width: 16px; height: 16px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { font: inherit; font-size: 13px; border: 0; background: transparent; color: var(--ink-2); padding: 6px 12px; cursor: pointer; min-height: 32px; }
+.seg button[aria-pressed="true"] { background: var(--accent-wash); color: var(--ink); font-weight: 600; }
+.meta { font-size: 12.5px; color: var(--ink-3); }
+section { margin: 28px 0; }
+h2 { font-size: 19px; margin: 0 0 4px; letter-spacing: -0.005em; }
+h3 { font-size: 15px; margin: 0 0 8px; }
+.lede { color: var(--ink-2); margin: 0 0 14px; max-width: 80ch; font-size: 14px; }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; box-shadow: var(--shadow); padding: 18px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); }
+.tile .k { font-size: 13px; color: var(--ink-2); }
+.tile .v { font-size: 26px; font-weight: 650; margin: 2px 0; letter-spacing: -0.01em; }
+.tile .d { font-size: 12.5px; color: var(--ink-3); }
+.note { background: var(--warn-wash); color: var(--warn-ink); border-radius: 10px; padding: 10px 14px; font-size: 13.5px; }
+.note b { color: inherit; }
+.badge { display: inline-block; font-size: 11px; font-weight: 600; line-height: 1; padding: 3px 6px; border-radius: 999px; vertical-align: 1px; white-space: nowrap; }
+.badge.warn { background: var(--warn-wash); color: var(--warn-ink); }
+.badge.mute { background: var(--surface-2); color: var(--ink-2); }
+.deal-down { color: var(--good); }
+.deal-up { color: var(--bad); }
+.muted { color: var(--ink-3); }
+/* planner */
+.planner { display: grid; grid-template-columns: minmax(260px, 330px) 1fr; gap: 20px; }
+.planner > *, .form > *, .field > * { min-width: 0; }
+@media (max-width: 820px) { .planner { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .card { padding: 14px; } .hero { font-size: 36px; } }
+.form { display: grid; gap: 12px; align-content: start; }
+.field { display: grid; gap: 4px; }
+.field > span { font-size: 13px; color: var(--ink-2); }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.row2 select, .row2 input { width: 100%; }
+.checks { display: grid; gap: 6px; font-size: 14px; }
+.checks label { display: flex; gap: 8px; align-items: flex-start; color: var(--ink); font-size: 14px; }
+.checks small { color: var(--ink-3); display: block; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: inherit; font-size: 12.5px; border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+.chip:hover { border-color: var(--ink-3); }
+.result-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
+.hero { font-size: 44px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+.split { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 10px 0 4px; font-size: 13.5px; color: var(--ink-2); }
+.split b { color: var(--ink); font-weight: 600; }
+.repbar { display: flex; gap: 2px; height: 10px; margin: 12px 0 4px; }
+.repbar span { border-radius: 999px; min-width: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.legend i.line { height: 2px; width: 14px; border-radius: 2px; vertical-align: 3px; }
+.warns { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.warns li { font-size: 13px; background: var(--warn-wash); color: var(--warn-ink); padding: 6px 10px; border-radius: 8px; }
+details.shop { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+details.shop summary { cursor: pointer; font-weight: 600; font-size: 14px; }
+/* tables */
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin: 0 0 10px; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--ring); border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); max-height: 640px; overflow-y: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td.wrap { white-space: normal; min-width: 160px; }
+th { position: sticky; top: 0; background: var(--surface); z-index: 1; font-size: 12px; font-weight: 600; color: var(--ink-2); box-shadow: inset 0 -1px 0 var(--line); }
+th button { all: unset; cursor: pointer; display: inline-flex; gap: 4px; align-items: center; }
+th button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+th[aria-sort] button::after { content: "↕"; color: var(--ink-3); font-size: 11px; }
+th[aria-sort="ascending"] button::after { content: "↑"; color: var(--ink); }
+th[aria-sort="descending"] button::after { content: "↓"; color: var(--ink); }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+th.num button { flex-direction: row-reverse; }
+tbody tr:hover td { background: var(--surface-2); }
+tr.best td { background: var(--accent-wash); }
+.count { font-size: 12.5px; color: var(--ink-3); }
+/* charts */
+.chart { width: 100%; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--ink-2); font-size: 12px; font-family: inherit; }
+.chart text.val { fill: var(--ink); font-variant-numeric: tabular-nums; }
+.chart .grid { stroke: var(--line); stroke-width: 1; }
+.chart .axis { stroke: var(--axis); stroke-width: 1; }
+.chart .ref { stroke: var(--ink-2); stroke-width: 1.5; }
+.chart .hit { fill: transparent; }
+.chart .hit:hover + .bar, .chart g.row:focus .bar { filter: brightness(1.12); }
+.tip { position: fixed; pointer-events: none; z-index: 10; background: var(--surface); color: var(--ink); border: 1px solid var(--ring);
+  box-shadow: 0 4px 18px rgba(0,0,0,.18); border-radius: 8px; padding: 8px 10px; font-size: 12.5px; max-width: 300px; display: none; }
+.tip .tv { font-weight: 650; font-size: 14px; }
+.tip .tr { display: flex; gap: 8px; align-items: center; }
+.tip .tr i { width: 12px; height: 2px; border-radius: 2px; display: inline-block; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 820px) { .grid2 { grid-template-columns: 1fr; } }
+.empty { color: var(--ink-3); font-size: 14px; padding: 24px 0; text-align: center; }
+footer { color: var(--ink-3); font-size: 12.5px; padding: 24px 0 40px; border-top: 1px solid var(--line); margin-top: 32px; }
+footer p { margin: 4px 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+button.link { all: unset; cursor: pointer; color: var(--ink-2); font-size: 12.5px; text-decoration: underline; text-underline-offset: 2px; }
+</style>
+</head>
+<body>
+<div class="tip" id="tip" role="tooltip"></div>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>Waylay</h1>
+      <span class="meta" id="metaLine"></span>
+    </div>
+    <p class="sub">The cheapest way to earn <b>Merchant's Favor</b> and <b id="facName">Azeroth Commerce Authority</b> reputation in WoW Forever, priced from today's TradeSkillMaster data.</p>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Faction">
+        <button type="button" data-fac="alliance" aria-pressed="true">Alliance</button>
+        <button type="button" data-fac="horde" aria-pressed="false">Horde</button>
+      </div>
+      <label>Price basis <select id="basis"></select></label>
+      <span class="meta" id="basisHelp"></span>
+    </div>
+  </header>
+
+  <div class="note" id="verifyNote" hidden></div>
+
+  <section aria-label="Summary">
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section id="plan">
+    <h2>Reputation planner</h2>
+    <p class="lede">Enter where you are and where you want to be. The planner buys the cheapest rep first. Below Friendly that means writs only (each writ can be turned in once a day). From Friendly it also weighs <b>Forged Delivery Receipts</b> (15 Favor + an empty crate = 50 rep), then prices the Favor from the cheapest crate fills.</p>
+    <div class="card planner">
+      <form class="form" id="planForm" onsubmit="return false">
+        <div class="field"><span>Current standing</span>
+          <div class="row2"><select id="pCur" aria-label="Current standing"></select><input id="pCurVal" type="number" min="0" step="1" value="0" aria-label="Rep into current standing"></div>
+        </div>
+        <div class="field"><span>Target standing</span><select id="pTarget"></select></div>
+        <div class="field"><span>Extra Favor you want to spend (recipes, toys…)</span>
+          <input id="pFavor" type="number" min="0" step="5" value="0">
+          <div class="chips" id="favorChips"></div>
+        </div>
+        <div class="field"><span>Days to spread writs over</span><input id="pDays" type="number" min="1" max="60" step="1" value="7"></div>
+        <div class="checks">
+          <label><input type="checkbox" id="pFirst"> <span>First crate already turned in<small>The one-time Shipping Label gives 2,000 rep + 50 Favor.</small></span></label>
+          <label><input type="checkbox" id="pLegacy"> <span>Legacy +10% reputation bonus</span></label>
+          <label><input type="checkbox" id="pUnverified" checked> <span>Use unverified writs<small>Their requirement is assumed to be 1 of the named item.</small></span></label>
+          <label><input type="checkbox" id="pVolume" checked> <span>Stay within normal sales volume<small>Caps each item at what TSM sees sell per day × days, so the plan doesn't assume an endless supply at today's price.</small></span></label>
+        </div>
+      </form>
+      <div id="planOut" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="favor">
+    <h2>Merchant's Favor: crate fills</h2>
+    <p class="lede">Each Waylaid Crate needs <b>one</b> of its listed materials. A row is one way to fill one crate: buy the crate and the materials, then turn it in. White crates (raw materials) pay 5/10/15/20 Favor by tier. Green crates (bars, parts, bolts and hides) pay 10/20/30/40. <b>vs usual</b> compares today's material price with TSM's historical price.</p>
+    <div class="card" style="margin-bottom:14px">
+      <h3>Cheapest fill per crate, cost per Favor</h3>
+      <div class="chart" id="favorChart"></div>
+    </div>
+    <div class="toolbar">
+      <input type="search" id="fSearch" placeholder="Search crate or material" aria-label="Search crates">
+      <select id="fTier" aria-label="Tier"><option value="">All tiers</option></select>
+      <select id="fCat" aria-label="Category"><option value="">All categories</option></select>
+      <label class="meta"><input type="checkbox" id="fBest" checked> Cheapest option per crate only</label>
+      <label class="meta"><input type="checkbox" id="fOwned"> I already have the crate</label>
+      <span class="count" id="fCount"></span>
+    </div>
+    <div class="tablewrap"><table id="favorTable"></table></div>
+  </section>
+
+  <section id="writs">
+    <h2>Reputation: Craftsman's Writs</h2>
+    <p class="lede">Buy the writ on the AH, buy (or craft) the requested item, and hand it in at the writ's NPC. Net cost = writ + item − the average Coin Pouch. Each writ is once per day. Rep shown is before the Legacy bonus.</p>
+    <div class="card" style="margin-bottom:14px">
+      <h3>Cheapest writs, cost per 1,000 rep <span class="meta" id="writChartNote"></span></h3>
+      <div class="chart" id="writChart"></div>
+    </div>
+    <div class="toolbar">
+      <input type="search" id="wSearch" placeholder="Search writ, item, zone" aria-label="Search writs">
+      <select id="wTier" aria-label="Tier"><option value="">All tiers</option></select>
+      <select id="wProf" aria-label="Profession"><option value="">All professions</option></select>
+      <select id="wZone" aria-label="Zone"><option value="">All zones</option></select>
+      <label class="meta"><input type="checkbox" id="wVerified"> Verified only</label>
+      <span class="count" id="wCount"></span>
+    </div>
+    <div class="tablewrap"><table id="writTable"></table></div>
+  </section>
+
+  <section id="history">
+    <h2>Price history</h2>
+    <p class="lede" id="histLede">One price snapshot is saved each day the report builds, so these charts fill in over time. Market value basis.</p>
+    <div class="grid2">
+      <div class="card"><h3>Cheapest Favor, cost per Favor</h3><div class="chart" id="histFavor"></div></div>
+      <div class="card"><h3>Cost per 1,000 rep</h3><div class="chart" id="histRep"></div></div>
+    </div>
+    <p><button type="button" class="link" id="histToggle">Show history as a table</button></p>
+    <div class="tablewrap" id="histTableWrap" hidden><table id="histTable"></table></div>
+  </section>
+
+  <section id="notes">
+    <h2>How the numbers work</h2>
+    <div class="card" id="notesBody"></div>
+  </section>
+
+  <footer>
+    <p>Pricing data from <a href="https://tradeskillmaster.com" rel="noopener">TradeSkillMaster</a>. Waylay is not affiliated with or endorsed by TradeSkillMaster or Blizzard.</p>
+    <p>Game data: Wowhead WoW Forever guides and database, Method.gg guides, and player reports. Edit <code>data/*.json</code> to correct anything.</p>
+    <p id="footMeta"></p>
+  </footer>
+</div>
+
+<script id="waylay-data" type="application/json">/*__WAYLAY_DATA__*/null</script>
+<script>
+"use strict";
+const R = JSON.parse(document.getElementById("waylay-data").textContent);
+const $ = (s, el = document) => el.querySelector(s);
+const el = (tag, attrs = {}, ...kids) => {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") n.className = v; else if (k === "text") n.textContent = v;
+    else if (k.startsWith("on")) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v === true ? "" : v);
+  }
+  for (const k of kids.flat()) if (k != null) n.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return n;
+};
+const SVGNS = "http://www.w3.org/2000/svg";
+const sv = (tag, attrs = {}) => { const n = document.createElementNS(SVGNS, tag); for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v); return n; };
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("waylay:" + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem("waylay:" + k, JSON.stringify(v)); } catch {} },
+};
+
+/* ---------- money ---------- */
+function money(c, opts = {}) {
+  if (c == null || !isFinite(c)) return "–";
+  const neg = c < 0; c = Math.abs(Math.round(c));
+  const g = Math.floor(c / 10000), s = Math.floor((c % 10000) / 100), cp = c % 100;
+  let out;
+  if (g >= 1000) out = g.toLocaleString() + "g";
+  else if (g >= 100 || (g && opts.short)) out = g + "g" + (s && g < 100 ? " " + s + "s" : "");
+  else if (g) out = g + "g " + String(s).padStart(2, "0") + "s";
+  else if (s) out = s + "s " + String(cp).padStart(2, "0") + "c";
+  else out = cp + "c";
+  return (neg ? "−" : "") + out;
+}
+const fmtInt = n => n == null ? "–" : Math.round(n).toLocaleString();
+const fmtSpd = n => n == null ? "–" : n >= 100 ? Math.round(n).toLocaleString() : n >= 10 ? n.toFixed(0) : n.toFixed(1);
+const roundHalfEven = x => { const f = Math.floor(x), d = x - f; if (Math.abs(d - 0.5) < 1e-9) return f % 2 === 0 ? f : f + 1; return Math.round(x); };
+
+/* ---------- state ---------- */
+const F = R.faction;
+const STANDINGS = F.standings;
+const CUM = {}; { let t = 0; for (const s of STANDINGS) { CUM[s.name] = t; t += s.size; } }
+const state = {
+  basis: store.get("basis", R.meta.bases[0].key),
+  fac: store.get("fac", "alliance"),
+};
+if (!R.bases[state.basis]) state.basis = R.meta.bases[0].key;
+const B = () => R.bases[state.basis];
+
+/* ---------- tooltip ---------- */
+const tip = $("#tip");
+function showTip(evt, build) {
+  tip.replaceChildren(...build());
+  tip.style.display = "block";
+  const r = tip.getBoundingClientRect();
+  let x = (evt.clientX ?? 0) + 14, y = (evt.clientY ?? 0) + 14;
+  if (evt.clientX == null && evt.target) { const b = evt.target.getBoundingClientRect(); x = b.right + 8; y = b.top; }
+  if (x + r.width > innerWidth - 8) x = Math.max(8, (evt.clientX ?? x) - r.width - 14);
+  if (y + r.height > innerHeight - 8) y = Math.max(8, innerHeight - r.height - 8);
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+const hideTip = () => { tip.style.display = "none"; };
+
+/* ---------- charts ---------- */
+function barChart(host, rows, { value, label, sub, ref, refLabel, fmt = money, tipRows }) {
+  host.replaceChildren();
+  if (!rows.length) { host.append(el("div", { class: "empty", text: "No priced rows for this basis." })); return; }
+  const W = Math.max(320, host.clientWidth || 720), rowH = 30, barH = 14, top = 4;
+  const labelW = Math.min(250, Math.round(W * 0.38)), valW = 74, plotW = W - labelW - valW - 8;
+  const max = Math.max(...rows.map(value), ref || 0) * 1.02;
+  const H = top + rows.length * rowH + (ref ? 22 : 6);
+  const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Ranked bar chart" });
+  const x = v => labelW + (v / max) * plotW;
+  svg.append(sv("line", { x1: labelW, x2: labelW, y1: top, y2: top + rows.length * rowH, class: "axis" }));
+  rows.forEach((r, i) => {
+    const y = top + i * rowH, v = value(r), w = Math.max(2, x(v) - labelW), by = y + (rowH - barH) / 2;
+    const g = sv("g", { class: "row", tabindex: 0 });
+    const lbl = sv("text", { x: labelW - 8, y: y + rowH / 2 + 4, "text-anchor": "end" });
+    const maxChars = Math.max(8, Math.floor((labelW - 12) / 6.6));
+    let name = label(r); if (name.length > maxChars) name = name.slice(0, maxChars - 1) + "…"; lbl.textContent = name;
+    const hit = sv("rect", { x: 0, y, width: W, height: rowH, class: "hit" });
+    const rad = Math.min(4, w / 2);
+    const bar = sv("path", { class: "bar", fill: "var(--s1)",
+      d: `M${labelW},${by} h${w - rad} a${rad},${rad} 0 0 1 ${rad},${rad} v${barH - 2 * rad} a${rad},${rad} 0 0 1 -${rad},${rad} h-${w - rad} z` });
+    const val = sv("text", { x: x(v) + 6, y: y + rowH / 2 + 4, class: "val" }); val.textContent = fmt(v);
+    g.append(hit, bar, lbl, val);
+    const tt = e => showTip(e, () => tipRows(r));
+    g.addEventListener("pointermove", tt); g.addEventListener("pointerleave", hideTip);
+    g.addEventListener("focus", tt); g.addEventListener("blur", hideTip);
+    svg.append(g);
+  });
+  if (ref) {
+    const rx = x(ref), y2 = top + rows.length * rowH;
+    svg.append(sv("line", { x1: rx, x2: rx, y1: top, y2: y2 + 4, class: "ref" }));
+    const t = sv("text", { x: rx, y: y2 + 17, "text-anchor": rx > W - 140 ? "end" : "middle" }); t.textContent = refLabel;
+    svg.append(t);
+  }
+  host.append(svg);
+}
+
+function lineChart(host, dates, series, { fmt = money } = {}) {
+  host.replaceChildren();
+  const pts = series.map(s => s.values.filter(v => v != null).length);
+  if (dates.length < 2 || Math.max(...pts) < 2) {
+    const last = series.map(s => [s, [...s.values].reverse().find(v => v != null)]).filter(([, v]) => v != null);
+    host.append(el("div", { class: "empty" },
+      el("div", { text: dates.length ? `Only ${dates.length} day of history so far (${dates[dates.length - 1]}).` : "No history yet." }),
+      el("div", { text: last.map(([s, v]) => `${s.name}: ${fmt(v)}`).join(" · ") })));
+    return;
+  }
+  const W = Math.max(300, host.clientWidth || 520), H = 220, m = { t: 10, r: 14, b: 26, l: 62 };
+  const all = series.flatMap(s => s.values).filter(v => v != null);
+  let lo = Math.min(...all), hi = Math.max(...all); if (lo === hi) { lo *= 0.9; hi *= 1.1; }
+  const pad = (hi - lo) * 0.08; lo = Math.max(0, lo - pad); hi += pad;
+  const X = i => m.l + (i / (dates.length - 1)) * (W - m.l - m.r);
+  const Y = v => m.t + (1 - (v - lo) / (hi - lo)) * (H - m.t - m.b);
+  const svg = sv("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": series.map(s => s.name).join(", ") + " over time" });
+  for (let k = 0; k <= 4; k++) {
+    const v = lo + (hi - lo) * k / 4, y = Y(v);
+    svg.append(sv("line", { x1: m.l, x2: W - m.r, y1: y, y2: y, class: k ? "grid" : "axis" }));
+    const t = sv("text", { x: m.l - 8, y: y + 4, "text-anchor": "end" }); t.textContent = fmt(v, { short: true }); svg.append(t);
+  }
+  const ticks = Math.min(5, dates.length);
+  for (let k = 0; k < ticks; k++) {
+    const i = Math.round(k * (dates.length - 1) / Math.max(1, ticks - 1));
+    const t = sv("text", { x: X(i), y: H - 6, "text-anchor": k === 0 ? "start" : k === ticks - 1 ? "end" : "middle" });
+    t.textContent = dates[i].slice(5); svg.append(t);
+  }
+  for (const s of series) {
+    let d = "", pen = false;
+    s.values.forEach((v, i) => { if (v == null) { pen = false; return; } d += (pen ? "L" : "M") + X(i).toFixed(1) + "," + Y(v).toFixed(1); pen = true; });
+    svg.append(sv("path", { d, fill: "none", stroke: s.color, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+    const li = s.values.map((v, i) => [v, i]).filter(([v]) => v != null).pop();
+    if (li) svg.append(sv("circle", { cx: X(li[1]), cy: Y(li[0]), r: 4, fill: s.color, stroke: "var(--surface)", "stroke-width": 2 }));
+  }
+  const cross = sv("line", { y1: m.t, y2: H - m.b, class: "axis", visibility: "hidden" });
+  const hit = sv("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b, fill: "transparent" });
+  svg.append(cross, hit);
+  hit.addEventListener("pointermove", e => {
+    const b = svg.getBoundingClientRect(), px = (e.clientX - b.left) * (W / b.width);
+    const i = Math.max(0, Math.min(dates.length - 1, Math.round((px - m.l) / (W - m.l - m.r) * (dates.length - 1))));
+    cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("visibility", "visible");
+    showTip(e, () => [el("div", { class: "meta", text: dates[i] }),
+      ...series.map(s => el("div", { class: "tr" }, el("i", { style: `background:${s.color}` }), el("span", { class: "tv", text: fmt(s.values[i]) }), el("span", { class: "muted", text: s.name })))]);
+  });
+  hit.addEventListener("pointerleave", () => { cross.setAttribute("visibility", "hidden"); hideTip(); });
+  host.append(svg);
+  if (series.length > 1) host.append(el("div", { class: "legend" }, series.map(s => el("span", {}, el("i", { class: "line", style: `background:${s.color}` }), s.name))));
+}
+
+/* ---------- sortable table ---------- */
+function table(tbl, cols, rows, sortState, onSort, rowClass) {
+  const thead = el("thead", {}, el("tr", {}, cols.map(c => {
+    const th = el("th", { class: c.num ? "num" : null, scope: "col", title: c.title || null });
+    if (c.sort === false || !sortState.click) th.textContent = c.label;
+    else {
+      th.setAttribute("aria-sort", sortState.key === c.key ? (sortState.dir > 0 ? "ascending" : "descending") : "none");
+      th.append(el("button", { type: "button", text: c.label, onclick: () => onSort(c) }));
+    }
+    return th;
+  })));
+  const col = cols.find(c => c.key === sortState.key);
+  const get = col ? (col.sortVal || (r => r[col.key])) : null;
+  const sorted = get ? [...rows].sort((a, b) => {
+    const x = get(a), y = get(b);
+    if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1;
+    return (typeof x === "string" ? x.localeCompare(y) : x - y) * sortState.dir;
+  }) : rows;
+  const tbody = el("tbody", {}, sorted.map(r => el("tr", { class: rowClass ? rowClass(r) : null },
+    cols.map(c => { const v = c.render ? c.render(r) : r[c.key]; return el("td", { class: [c.num ? "num" : "", c.wrap ? "wrap" : ""].join(" ").trim() || null }, v == null ? "–" : v); }))));
+  tbl.replaceChildren(thead, tbody);
+}
+function sorter(key, dir, rerender) {
+  const s = { key, dir };
+  s.click = c => { if (s.key === c.key) s.dir = -s.dir; else { s.key = c.key; s.dir = c.num ? 1 : 1; } rerender(); };
+  return s;
+}
+function dealCell(d) {
+  if (d == null) return el("span", { class: "muted", text: "–" });
+  const pct = Math.round(d * 100);
+  if (Math.abs(pct) < 3) return el("span", { class: "muted", text: "≈ usual" });
+  return el("span", { class: pct < 0 ? "deal-down" : "deal-up", title: "vs TSM historical price" }, (pct < 0 ? "▼ " : "▲ ") + Math.abs(pct) + "%");
+}
+const itemName = id => (R.items[id] && R.items[id].name) || "";
+
+/* ---------- planner ---------- */
+function plan(p) {
+  // Pass 1 prices receipts at the cheapest Favor. Volume caps can push the real average up,
+  // so re-plan once with the Favor price the first pass actually paid.
+  const first = planPass(p, null);
+  if (!first.receipts || !first.favorBought) return first;
+  const eff = first.gold.favor / first.favorBought;
+  const cheapest = B().summary.cheapestCrate;
+  if (!cheapest || eff <= B().summary.bestFavor.perFavor * 1.01) return first;
+  const second = planPass(p, { cost: F.receipt.favor * eff + cheapest.price });
+  return second.total <= first.total ? second : first;
+}
+
+function planPass(p, recOverride) {
+  const b = B(), mult = p.legacy ? 1 + F.legacyRepBonus : 1;
+  const repOf = r => roundHalfEven(r * mult);
+  let pos = CUM[p.cur] + Math.max(0, Math.min(p.curVal, STANDINGS.find(s => s.name === p.cur).size - 1));
+  const goal = CUM[p.target], start = pos;
+  const out = { start, goal, rep: { first: 0, writs: 0, receipts: 0 }, gold: { writs: 0, favor: 0, crates: 0 }, writs: new Map(),
+    receipts: 0, favorNeeded: 0, fills: [], empties: [], warns: [], firstCrate: false, maxPerWrit: 0, unverifiedUsed: 0 };
+  if (goal <= pos) { out.done = true; return out; }
+  const days = Math.max(1, p.days | 0);
+  const capFor = perDay => p.volume && perDay != null ? Math.floor(perDay * days) : Infinity;
+  // writ pool, each writ at most once a day
+  const pool = b.writs.filter(w => w.perRep != null && (p.unverified || w.verified))
+    .map(w => ({ w, left: Math.min(days, capFor(w.perDay)), rep: repOf(w.rep) }))
+    .filter(x => x.left > 0).sort((a, c) => a.w.net / a.rep - c.w.net / c.rep);
+  const takeWrit = () => {
+    const x = pool.find(x => x.left > 0); if (!x) return false;
+    x.left--; pos += x.rep; out.rep.writs += x.rep; out.gold.writs += x.w.net;
+    const cur = out.writs.get(x.w.itemId) || { w: x.w, n: 0 }; cur.n++; out.writs.set(x.w.itemId, cur);
+    return true;
+  };
+  let favorBank = 0;
+  if (!p.firstDone) { const r = repOf(F.firstCrate.rep); pos += r; out.rep.first = r; favorBank += F.firstCrate.favor; out.firstCrate = true; }
+  const friendly = CUM.Friendly;
+  while (pos < Math.min(goal, friendly)) if (!takeWrit()) { out.warns.push(`Ran out of writs before Friendly. Allow more days or include unverified writs.`); break; }
+  const rec = recOverride || b.summary.receipt;
+  const recRep = repOf(F.receipt.rep);
+  if (pos < goal && pos >= friendly) {
+    const recPer = rec ? rec.cost / recRep : Infinity;
+    while (pos < goal) {
+      const x = pool.find(x => x.left > 0);
+      if (x && x.w.net / x.rep <= recPer) takeWrit();
+      else if (rec) { const need = Math.ceil((goal - pos) / recRep); out.receipts += need; pos += need * recRep; out.rep.receipts += need * recRep; }
+      else if (!takeWrit()) { out.warns.push("Not enough writs and no receipt price available."); break; }
+    }
+  }
+  // Favor: receipts + extra spend, minus what the first crate gives
+  let favor = out.receipts * F.receipt.favor + Math.max(0, p.extraFavor | 0) - favorBank;
+  const crateUsed = new Map(), matUsed = new Map();
+  const opts = b.crateOptions.filter(o => o.perFavor != null).sort((a, c) => a.perFavor - c.perFavor);
+  const fills = new Map();
+  let remaining = favor;
+  if (out.firstCrate && remaining <= 0) remaining = 1; // the first crate still has to be filled
+  for (const o of opts) {
+    if (remaining <= 0) break;
+    const cCap = capFor(o.crateSoldPerDay) - (crateUsed.get(o.crateId) || 0);
+    const mCap = Math.floor((capFor(o.matSoldPerDay) - (matUsed.get(o.itemId) || 0)) / (isFinite(capFor(o.matSoldPerDay)) ? o.qty : 1));
+    const n = Math.min(Math.ceil(remaining / o.favor), cCap, isFinite(mCap) ? mCap : Infinity);
+    if (n <= 0) continue;
+    remaining -= n * o.favor;
+    crateUsed.set(o.crateId, (crateUsed.get(o.crateId) || 0) + n);
+    matUsed.set(o.itemId, (matUsed.get(o.itemId) || 0) + n * o.qty);
+    fills.set(o.crateId + ":" + o.itemId, { o, n });
+    out.gold.favor += n * o.total;
+  }
+  if (remaining > 0 && favor > 0) out.warns.push(`Couldn't source ${fmtInt(remaining)} Favor within normal sales volume over ${days} days. Prices will climb past what's shown.`);
+  out.fills = [...fills.values()];
+  out.favorNeeded = Math.max(0, favor);
+  out.favorBought = out.fills.reduce((a, f) => a + f.n * f.o.favor, 0);
+  // empty crates for receipts
+  let needEmpty = out.receipts;
+  const crates = b.crates.filter(c => c.price != null).sort((a, c) => a.price - c.price);
+  for (const c of crates) {
+    if (needEmpty <= 0) break;
+    const n = Math.min(needEmpty, capFor(c.soldPerDay) - (crateUsed.get(c.itemId) || 0));
+    if (n <= 0) continue;
+    needEmpty -= n; crateUsed.set(c.itemId, (crateUsed.get(c.itemId) || 0) + n);
+    out.empties.push({ c, n }); out.gold.crates += n * c.price;
+  }
+  if (needEmpty > 0) out.warns.push(`${fmtInt(needEmpty)} receipts have no empty crate within normal sales volume. Crate prices will climb.`);
+  out.end = pos;
+  out.total = out.gold.writs + out.gold.favor + out.gold.crates;
+  for (const { w, n } of out.writs.values()) { out.maxPerWrit = Math.max(out.maxPerWrit, n); if (!w.verified) out.unverifiedUsed += n; }
+  if (out.unverifiedUsed) out.warns.push(`${out.unverifiedUsed} writ turn-ins use an unverified requirement (assumed 1 item). If a writ wants more, it costs more.`);
+  return out;
+}
+
+function standingLabel(abs) {
+  for (let i = STANDINGS.length - 1; i >= 0; i--) { const s = STANDINGS[i]; if (abs >= CUM[s.name]) return `${s.name} ${fmtInt(abs - CUM[s.name])}/${fmtInt(s.size)}`; }
+  return "";
+}
+
+function renderPlanner() {
+  const p = {
+    cur: $("#pCur").value, curVal: +$("#pCurVal").value || 0, target: $("#pTarget").value,
+    extraFavor: +$("#pFavor").value || 0, days: +$("#pDays").value || 7,
+    firstDone: $("#pFirst").checked, legacy: $("#pLegacy").checked,
+    unverified: $("#pUnverified").checked, volume: $("#pVolume").checked,
+  };
+  store.set("plan", p);
+  const r = plan(p), host = $("#planOut");
+  if (r.done) { host.replaceChildren(el("div", { class: "empty", text: "You're already at or past that standing. Pick a higher target." })); return; }
+  const total = r.rep.first + r.rep.writs + r.rep.receipts;
+  const segs = [["First crate", r.rep.first, "var(--s3)"], ["Writs", r.rep.writs, "var(--s1)"], ["Receipts", r.rep.receipts, "var(--s2)"]].filter(s => s[1] > 0);
+  const nWrits = [...r.writs.values()].reduce((a, x) => a + x.n, 0);
+  const daysNeeded = Math.max(1, r.maxPerWrit);
+  const parts = [];
+  parts.push(el("div", { class: "result-head" },
+    el("div", { class: "hero", text: money(r.total, { short: true }) }),
+    el("div", { class: "meta", text: `${standingLabel(r.start)} → ${standingLabel(r.goal)} · ${fmtInt(r.goal - r.start)} rep${r.rep.receipts || p.extraFavor ? ` · ${fmtInt(r.favorNeeded)} Favor to buy` : ""}` })));
+  parts.push(el("div", { class: "split" },
+    el("span", {}, "Writs ", el("b", { text: money(r.gold.writs) }), ` (${nWrits} turn-ins over ${daysNeeded} day${daysNeeded > 1 ? "s" : ""})`),
+    el("span", {}, "Favor crates ", el("b", { text: money(r.gold.favor) })),
+    r.receipts ? el("span", {}, "Empty crates for receipts ", el("b", { text: money(r.gold.crates) }), ` (${fmtInt(r.receipts)} receipts)`) : null));
+  parts.push(el("div", { class: "repbar", role: "img", "aria-label": segs.map(s => `${s[0]} ${fmtInt(s[1])} rep`).join(", ") },
+    segs.map(s => el("span", { style: `flex:${s[1]} 1 0;background:${s[2]}`, title: `${s[0]}: ${fmtInt(s[1])} rep` }))));
+  parts.push(el("div", { class: "legend" }, segs.map(s => el("span", {}, el("i", { style: `background:${s[2]}` }), `${s[0]} ${fmtInt(s[1])} rep`))));
+  if (r.warns.length) parts.push(el("ul", { class: "warns" }, r.warns.map(w => el("li", { text: w }))));
+
+  // shopping lists
+  const wrows = [...r.writs.values()].sort((a, b) => a.w.net / a.w.rep - b.w.net / b.w.rep);
+  if (wrows.length) {
+    const t = el("table");
+    table(t, [
+      { key: "name", label: "Writ", render: x => el("span", {}, x.w.name, x.w.verified ? null : [" ", el("span", { class: "badge warn", text: "unverified" })]) },
+      { key: "tier", label: "Tier", render: x => x.w.tier },
+      { key: "n", label: "×", num: true, render: x => x.n },
+      { key: "each", label: "Net each", num: true, render: x => money(x.w.net) },
+      { key: "where", label: "Hand in", wrap: true, render: x => handIn(x.w) },
+    ], wrows, {}, () => {});
+    parts.push(el("details", { class: "shop", open: true }, el("summary", { text: `Writs to buy (${nWrits})` }), el("div", { class: "tablewrap", style: "max-height:320px;margin-top:8px" }, t)));
+  }
+  if (r.fills.length) {
+    const t = el("table");
+    table(t, [
+      { key: "crate", label: "Crate", render: x => x.o.crate },
+      { key: "n", label: "×", num: true, render: x => x.n },
+      { key: "fill", label: "Fill with", render: x => `${x.o.qty * x.n} × ${x.o.item}` },
+      { key: "fav", label: "Favor", num: true, render: x => fmtInt(x.n * x.o.favor) },
+      { key: "cost", label: "Cost", num: true, render: x => money(x.n * x.o.total) },
+    ], r.fills, {}, () => {});
+    parts.push(el("details", { class: "shop" }, el("summary", { text: `Crates to fill for Favor (${fmtInt(r.fills.reduce((a, f) => a + f.n, 0))})` }), el("div", { class: "tablewrap", style: "max-height:320px;margin-top:8px" }, t)));
+  }
+  if (r.empties.length) {
+    const t = el("table");
+    table(t, [
+      { key: "c", label: "Empty crate", render: x => x.c.name.replace("Waylaid Crate: ", "") },
+      { key: "n", label: "×", num: true, render: x => fmtInt(x.n) },
+      { key: "each", label: "Each", num: true, render: x => money(x.c.price) },
+    ], r.empties, {}, () => {});
+    parts.push(el("details", { class: "shop" }, el("summary", { text: `Empty crates + ${fmtInt(r.receipts)} Forged Delivery Receipts` }),
+      el("p", { class: "meta", text: `Buy ${fmtInt(r.receipts)} receipts from the Uncertified Scribe (${fmtInt(r.receipts * F.receipt.favor)} Favor), apply one to each empty crate, then hand them in.` }),
+      el("div", { class: "tablewrap", style: "max-height:320px" }, t)));
+  }
+  host.replaceChildren(...parts);
+}
+
+function handIn(w) {
+  if (!w.zone && !w.npc) return el("span", { class: "muted", text: "unknown" });
+  return el("span", {}, [w.npc, w.zone].filter(Boolean).join(", "), w.coords ? el("span", { class: "muted", text: ` (${w.coords})` }) : null);
+}
+
+function setupPlanner() {
+  const opt = (s, v) => el("option", { value: s, text: s, selected: s === v });
+  const saved = store.get("plan", {});
+  $("#pCur").append(...STANDINGS.slice(0, -1).map(s => opt(s.name, saved.cur || "Neutral")));
+  $("#pTarget").append(...STANDINGS.slice(1).map(s => opt(s.name, saved.target || "Honored")));
+  for (const [id, k] of [["pCurVal", "curVal"], ["pFavor", "extraFavor"], ["pDays", "days"]]) if (saved[k] != null) $("#" + id).value = saved[k];
+  for (const [id, k] of [["pFirst", "firstDone"], ["pLegacy", "legacy"], ["pUnverified", "unverified"], ["pVolume", "volume"]]) if (saved[k] != null) $("#" + id).checked = saved[k];
+  $("#favorChips").append(...F.rewards.filter(x => x.favor >= 100).map(x => el("button", { type: "button", class: "chip", title: `${x.kind}${x.standing ? ", needs " + x.standing : ""}`,
+    onclick: () => { $("#pFavor").value = (+$("#pFavor").value || 0) + x.favor; renderPlanner(); } }, `+${fmtInt(x.favor)} ${x.name.replace(/ \(.*\)/, "")}`)),
+    el("button", { type: "button", class: "chip", onclick: () => { $("#pFavor").value = 0; renderPlanner(); } }, "Clear"));
+  $("#planForm").addEventListener("input", renderPlanner);
+}
+
+/* ---------- tiles ---------- */
+function renderTiles() {
+  const s = B().summary;
+  const quick = plan({ cur: "Neutral", curVal: 0, target: "Honored", extraFavor: 0, days: 7, firstDone: false, legacy: false, unverified: true, volume: true });
+  const tiles = [
+    ["Cheapest Merchant's Favor", s.bestFavor ? money(s.bestFavor.perFavor) : "–", s.bestFavor ? `per Favor · ${s.bestFavor.crate} with ${s.bestFavor.qty} × ${s.bestFavor.item}` : ""],
+    ["Cheapest writ rep", (() => { const b = Object.values(s.bestWrit).sort((a, c) => a.perRep - c.perRep)[0]; return b ? money(b.perRep * 1000) : "–"; })(),
+      (() => { const b = Object.values(s.bestWrit).sort((a, c) => a.perRep - c.perRep)[0]; return b ? `per 1,000 rep · ${b.name}${b.verified ? "" : " (unverified)"}` : ""; })()],
+    ["Receipt route (Friendly+)", s.receipt ? money(s.receipt.perRep * 1000) : "–", "per 1,000 rep · 15 Favor + an empty crate each"],
+    ["Neutral → Honored", money(quick.total, { short: true }), "fresh character, 7 days of writs, then receipts"],
+  ];
+  $("#tiles").replaceChildren(...tiles.map(([k, v, d]) => el("div", { class: "tile" }, el("div", { class: "k", text: k }), el("div", { class: "v", text: v }), el("div", { class: "d", text: d }))));
+}
+
+/* ---------- favor table ---------- */
+const fSort = sorter("perFavor", 1, () => renderFavor());
+function renderFavor() {
+  const b = B(), q = $("#fSearch").value.trim().toLowerCase(), tier = $("#fTier").value, cat = $("#fCat").value;
+  const owned = $("#fOwned").checked, key = owned ? "perFavorOwned" : "perFavor";
+  let rows = b.crateOptions.filter(o => (!tier || o.tier === tier) && (!cat || o.category === cat) && (!q || (o.crate + " " + o.item).toLowerCase().includes(q)));
+  const bestPer = new Map();
+  for (const o of b.crateOptions) if (o[key] != null && (!bestPer.has(o.crateId) || o[key] < bestPer.get(o.crateId)[key])) bestPer.set(o.crateId, o);
+  if ($("#fBest").checked) rows = rows.filter(o => bestPer.get(o.crateId) === o || (o[key] == null && !bestPer.has(o.crateId)));
+  const overall = [...bestPer.values()].sort((a, c) => a[key] - c[key])[0];
+  if (fSort.key === "perFavor" || fSort.key === "perFavorOwned") fSort.key = key;
+  table($("#favorTable"), [
+    { key: "crate", label: "Crate", render: o => el("span", {}, o.crate, o.note ? [" ", el("span", { class: "badge warn", title: o.note, text: "check qty" })] : null) },
+    { key: "tier", label: "Tier", sortVal: o => ["Apprentice", "Journeyman", "Expert", "Artisan"].indexOf(o.tier) },
+    { key: "reqLevel", label: "Lvl", num: true },
+    { key: "favor", label: "Favor", num: true },
+    { key: "item", label: "Fill with", render: o => `${o.qty} × ${o.item}` },
+    { key: "unit", label: "Each", num: true, render: o => money(o.unit) },
+    { key: "deal", label: "vs usual", num: true, render: o => dealCell(o.deal) },
+    { key: "matCost", label: "Materials", num: true, render: o => money(o.matCost) },
+    { key: "crateCost", label: "Crate", num: true, render: o => owned ? el("span", { class: "muted", text: "owned" }) : money(o.crateCost) },
+    { key, label: "Per Favor", num: true, render: o => el("b", { text: money(o[key]) }) },
+    { key: "perDay", label: "Fills/day", num: true, title: "Crates you could fill per day buying only what normally sells (min of crate and material sales/day)", render: o => fmtSpd(o.perDay) },
+  ], rows, fSort, fSort.click, o => o === overall ? "best" : null);
+  $("#fCount").textContent = `${rows.length} row${rows.length === 1 ? "" : "s"}`;
+  const top = [...bestPer.values()].sort((a, c) => a[key] - c[key]).slice(0, 12);
+  barChart($("#favorChart"), top, {
+    value: o => o[key], label: o => `${o.crate} · ${o.item}`,
+    tipRows: o => [el("div", { class: "tv", text: money(o[key]) + " per Favor" }), el("div", { text: `${o.crate}: ${o.qty} × ${o.item}` }),
+      el("div", { class: "muted", text: `${o.favor} Favor · total ${money(owned ? o.matCost : o.total)} · ~${fmtSpd(o.perDay)} fills/day` })],
+  });
+}
+
+/* ---------- writ table ---------- */
+const wSort = sorter("perRep", 1, () => renderWrits());
+function renderWrits() {
+  const b = B(), q = $("#wSearch").value.trim().toLowerCase(), tier = $("#wTier").value, prof = $("#wProf").value, zone = $("#wZone").value, vo = $("#wVerified").checked;
+  const rows = b.writs.filter(w => (!tier || w.tier === tier) && (!prof || w.professions.includes(prof)) && (!zone || w.zone === zone) && (!vo || w.verified) &&
+    (!q || [w.name, w.zone, w.npc, ...w.items.map(i => i.name)].join(" ").toLowerCase().includes(q)));
+  const best = rows.filter(w => w.perRep != null).sort((a, c) => a.perRep - c.perRep)[0];
+  table($("#writTable"), [
+    { key: "name", label: "Writ", render: w => el("span", {}, w.name, w.verified ? null : [" ", el("span", { class: "badge warn", title: "Requirement assumed: 1 × the named item", text: "unverified" })]) },
+    { key: "tier", label: "Tier", sortVal: w => w.rep },
+    { key: "rep", label: "Rep", num: true },
+    { key: "prof", label: "Profession", sortVal: w => w.professions.join(), render: w => w.professions.join(", ") },
+    { key: "zone", label: "Hand in", wrap: true, render: w => handIn(w) },
+    { key: "writPrice", label: "Writ", num: true, render: w => money(w.writPrice) },
+    { key: "itemCost", label: "Item", num: true, render: w => el("span", { title: w.items.map(i => `${i.qty} × ${i.name}`).join(", ") }, w.items[0].qty > 1 ? `${w.items[0].qty}× ` : "", money(w.itemCost)) },
+    { key: "deal", label: "Item vs usual", num: true, sortVal: w => w.items[0].deal, render: w => dealCell(w.items[0].deal) },
+    { key: "coin", label: "Pouch", num: true, render: w => el("span", { class: "muted", text: "−" + money(w.coin) }) },
+    { key: "net", label: "Net", num: true, render: w => money(w.net) },
+    { key: "perRep", label: "Per 1k rep", num: true, render: w => el("b", { text: w.perRep == null ? "–" : money(w.perRep * 1000) }) },
+    { key: "perDay", label: "Sold/day", num: true, title: "Lowest of writ and item sales per day (TSM)", render: w => fmtSpd(w.perDay) },
+  ], rows, wSort, wSort.click, w => w === best ? "best" : null);
+  $("#wCount").textContent = `${rows.length} writ${rows.length === 1 ? "" : "s"}`;
+  const top = rows.filter(w => w.perRep != null).sort((a, c) => a.perRep - c.perRep).slice(0, 12);
+  const rec = b.summary.receipt;
+  $("#writChartNote").textContent = rec ? "· line = receipt route" : "";
+  barChart($("#writChart"), top, {
+    value: w => w.perRep * 1000, label: w => `${w.name}${w.verified ? "" : " *"}`,
+    ref: rec ? rec.perRep * 1000 : null, refLabel: rec ? `Receipt route ${money(rec.perRep * 1000)}` : "",
+    tipRows: w => [el("div", { class: "tv", text: money(w.perRep * 1000) + " per 1,000 rep" }), el("div", { text: `${w.name} (${w.tier}, ${w.rep} rep)` }),
+      el("div", { class: "muted", text: `writ ${money(w.writPrice)} + item ${money(w.itemCost)} − pouch ${money(w.coin)}${w.verified ? "" : " · requirement unverified"}` })],
+  });
+}
+
+/* ---------- history ---------- */
+function renderHistory() {
+  const h = R.history;
+  lineChart($("#histFavor"), h.dates, [{ name: "Cheapest Favor", values: h.bestPerFavor, color: "var(--s1)" }]);
+  const k = v => v == null ? null : v * 1000;
+  const reps = [
+    { name: "Receipt route", values: h.receiptPerRep.map(k), color: "var(--s1)" },
+    { name: "Best Journeyman writ", values: h.bestWritPerRep.Journeyman.map(k), color: "var(--s2)" },
+    { name: "Best Expert writ", values: h.bestWritPerRep.Expert.map(k), color: "var(--s3)" },
+    { name: "Best Artisan writ", values: h.bestWritPerRep.Artisan.map(k), color: "var(--s4)" },
+  ];
+  lineChart($("#histRep"), h.dates, reps);
+  $("#histLede").textContent = `One price snapshot is saved each day the report builds, so these charts fill in over time (${h.dates.length} day${h.dates.length === 1 ? "" : "s"} so far). Market value basis.`;
+  table($("#histTable"), [
+    { key: "d", label: "Date", sort: false },
+    { key: "f", label: "Per Favor", num: true, sort: false, render: r => money(r.f) },
+    ...reps.map((s, i) => ({ key: "r" + i, label: s.name, num: true, sort: false, render: r => money(r["r" + i]) })),
+  ], h.dates.map((d, i) => Object.assign({ d, f: h.bestPerFavor[i] }, ...reps.map((s, j) => ({ ["r" + j]: s.values[i] })))).reverse(), {}, () => {});
+}
+
+/* ---------- notes ---------- */
+function renderNotes() {
+  const items = [
+    ["Prices", `TSM ${R.meta.source.label}. Region data averages every realm in the region, so a single realm can be cheaper or pricier. Pass --realm to the build for one realm's prices.`],
+    ["Price basis", "Market value is TSM's recent fair price. Avg sale price is what items actually sold for. Historical is the longer-term average and makes a good \"normal\" baseline."],
+    ["Favor", "Crate cost + materials ÷ Favor paid. Filled crates pay Favor only, no rep (except your first crate's one-time Shipping Label)."],
+    ["Writs", "Writ price + requested item − average Coin Pouch. Journeyman 75, Expert 125, Artisan 200 rep. Each specific writ can be done once per day."],
+    ["Receipts", `From Friendly, a Forged Delivery Receipt (${F.receipt.favor} Favor) turns any empty Waylaid Crate into +${F.receipt.rep} rep, so its cost is ${F.receipt.favor} × the cheapest Favor + the cheapest crate.`],
+    ["Sales volume", "\"Sold/day\" is TSM's sales-per-day stat. The planner uses it to stop assuming you can buy hundreds of something at today's price."],
+    ["Writ data", `Every writ's requirement was checked against its Wowhead quest objective. All want 1 item except Crafted Solid Shot (200).${R.meta.unverifiedWrits ? ` ${R.meta.unverifiedWrits} writs are still unverified and assumed to want 1 of the named item.` : ""} Hand-in coordinates are zone map % and only shown where the guide had no location.`],
+  ];
+  $("#notesBody").replaceChildren(el("dl", { style: "margin:0;display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;font-size:14px" },
+    items.flatMap(([k, v]) => [el("dt", { style: "font-weight:600", text: k }), el("dd", { style: "margin:0;color:var(--ink-2)", text: v })])));
+}
+
+/* ---------- wiring ---------- */
+function setFaction(f) {
+  state.fac = f; store.set("fac", f);
+  document.querySelectorAll("[data-fac]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.fac === f)));
+  $("#facName").textContent = F.factions[f].name;
+}
+function renderAll() { renderTiles(); renderPlanner(); renderFavor(); renderWrits(); }
+
+function init() {
+  const m = R.meta;
+  $("#metaLine").textContent = `${m.source.label} · TSM scan ${m.tsmUpdatedAt ? m.tsmUpdatedAt.replace("T", " ").slice(0, 16) + " UTC" : "unknown"}`;
+  $("#footMeta").textContent = `Built ${m.generated.replace("T", " ")} UTC.`;
+  const bs = $("#basis");
+  bs.append(...m.bases.map(b => el("option", { value: b.key, text: b.label, selected: b.key === state.basis })));
+  bs.addEventListener("change", () => { state.basis = bs.value; store.set("basis", bs.value); renderAll(); });
+  document.querySelectorAll("[data-fac]").forEach(b => b.addEventListener("click", () => setFaction(b.dataset.fac)));
+  setFaction(state.fac in F.factions ? state.fac : "alliance");
+  if (!m.unverifiedWrits) for (const id of ["pUnverified", "wVerified"]) $("#" + id).closest("label").hidden = true;
+  if (m.unverifiedWrits) {
+    const n = $("#verifyNote"); n.hidden = false;
+    n.append(el("b", { text: `${m.unverifiedWrits} of 150 writs are unverified.` }), " Their required item is assumed to be 1 of the named item. Several of the cheapest writs are in that group (bombs, potions, parts), and those could want more than one. Look for the ", el("span", { class: "badge warn", text: "unverified" }), " tag.");
+  }
+  const all = R.bases[m.bases[0].key];
+  const uniq = a => [...new Set(a)].filter(Boolean);
+  $("#fTier").append(...["Apprentice", "Journeyman", "Expert", "Artisan"].map(t => el("option", { value: t, text: t })));
+  $("#fCat").append(...uniq(all.crateOptions.map(o => o.category)).sort().map(t => el("option", { value: t, text: t })));
+  $("#wTier").append(...["Journeyman", "Expert", "Artisan"].map(t => el("option", { value: t, text: t })));
+  $("#wProf").append(...uniq(all.writs.flatMap(w => w.professions)).sort().map(t => el("option", { value: t, text: t })));
+  $("#wZone").append(...uniq(all.writs.map(w => w.zone)).sort().map(t => el("option", { value: t, text: t })));
+  for (const id of ["fSearch", "fTier", "fCat", "fBest", "fOwned"]) $("#" + id).addEventListener("input", renderFavor);
+  for (const id of ["wSearch", "wTier", "wProf", "wZone", "wVerified"]) $("#" + id).addEventListener("input", renderWrits);
+  $("#histToggle").addEventListener("click", e => { const w = $("#histTableWrap"); w.hidden = !w.hidden; e.target.textContent = w.hidden ? "Show history as a table" : "Hide history table"; });
+  setupPlanner();
+  renderAll(); renderHistory(); renderNotes();
+  let t; addEventListener("resize", () => { clearTimeout(t); t = setTimeout(() => { renderFavor(); renderWrits(); renderHistory(); }, 150); });
+}
+init();
+</script>
+</body>
+</html>

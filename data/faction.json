@@ -1,0 +1,116 @@
+{
+  "_source": "Wowhead ACA/DSL guides (guide=34852, 34869), Craftsman's Writs guide (guide=35185), Method.gg reputation guide. Edit when Blizzard changes numbers.",
+  "factions": {
+    "alliance": {
+      "id": 2586,
+      "name": "Azeroth Commerce Authority",
+      "turnIn": "Marcy Baker, Three Corners (Redridge Mountains) 9.6, 70.9"
+    },
+    "horde": {
+      "id": 2587,
+      "name": "Durotar Supply and Logistics",
+      "turnIn": "Dokimi, outside the Crossroads (The Barrens) 50.0, 29.2"
+    }
+  },
+  "standings": [
+    {
+      "name": "Neutral",
+      "size": 3000
+    },
+    {
+      "name": "Friendly",
+      "size": 6000
+    },
+    {
+      "name": "Honored",
+      "size": 12000
+    },
+    {
+      "name": "Revered",
+      "size": 21000
+    },
+    {
+      "name": "Exalted",
+      "size": 999
+    }
+  ],
+  "legacyRepBonus": 0.1,
+  "firstCrate": {
+    "rep": 2000,
+    "favor": 50,
+    "note": "Your first filled crate also gives a Shipping Label: one-time quest for 2,000 rep and 50 Favor."
+  },
+  "receipt": {
+    "itemId": 262902,
+    "name": "Forged Delivery Receipt",
+    "favor": 15,
+    "rep": 50,
+    "minStanding": "Friendly",
+    "note": "Any empty Waylaid Crate works (any tier or quality). No daily or weekly cap known."
+  },
+  "writRepByTier": {
+    "Journeyman": 75,
+    "Expert": 125,
+    "Artisan": 200
+  },
+  "coinPouchCopper": {
+    "_note": "Average coin from the writ's Coin Pouch reward: Wowhead's 'Worth' estimate on each pouch page (checked 2026-11-26).",
+    "Journeyman": 3486,
+    "Expert": 7509,
+    "Artisan": 15047
+  },
+  "rewards": [
+    {
+      "name": "Forged Delivery Receipt",
+      "favor": 15,
+      "standing": "Friendly",
+      "kind": "Rep item"
+    },
+    {
+      "name": "Profession recipes",
+      "favor": 30,
+      "favorMax": 360,
+      "standing": "Neutral to Honored",
+      "kind": "Recipe"
+    },
+    {
+      "name": "Honored enchanting formula",
+      "favor": 240,
+      "standing": "Honored",
+      "kind": "Recipe",
+      "note": "Most Honored formulas (enchants, idols, librams, totems) are 240 Favor; Brilliant Wand and Enchant Boots - Speed are 180."
+    },
+    {
+      "name": "Profession Certification (title)",
+      "favor": 1000,
+      "standing": null,
+      "kind": "Title",
+      "note": "Needs 300 skill"
+    },
+    {
+      "name": "Advertising License Application",
+      "favor": 1200,
+      "standing": "Honored",
+      "kind": "Toy"
+    },
+    {
+      "name": "Packmule Treat (Minimule pet)",
+      "favor": 1500,
+      "standing": "Revered",
+      "kind": "Pet",
+      "note": "Method lists Revered; Wowhead lists no requirement"
+    },
+    {
+      "name": "Faction tabard",
+      "favor": 200,
+      "standing": "Exalted",
+      "kind": "Tabard"
+    },
+    {
+      "name": "Reins of the Pack Kodo",
+      "favor": 6000,
+      "standing": "Exalted",
+      "kind": "Mount"
+    }
+  ]
+}
