@@ -18,4 +18,3 @@ node_modules/
 # Generated report
 /site/
 __pycache__/
-*.egg-info/
