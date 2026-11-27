@@ -7,10 +7,16 @@
 </p>
 
 <p align="center">
+  <a href="https://tylxr59.github.io/Waylay/"><b>🌐 Open the live report: tylxr59.github.io/Waylay</b></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/tylxr59/Waylay/actions/workflows/report.yml"><img alt="Daily report" src="https://github.com/tylxr59/Waylay/actions/workflows/report.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-97ca00"></a>
 </p>
 
 <p align="center">
+  <a href="https://tylxr59.github.io/Waylay/">Live report</a> ·
   <a href="#-features">Features</a> ·
   <a href="#-quick-start">Quick start</a> ·
   <a href="#-usage">Usage</a> ·
@@ -34,6 +40,10 @@ The Commerce Authority grind has three moving parts. **Waylaid Crates** pay Favo
 | 📉 **Volume-aware** | Caps purchases at TSM's sold-per-day, so the plan doesn't assume 900 Gold Power Cores at today's price. |
 | 🔗 **Wowhead links** | Every crate, material, writ, quest and known hand-in NPC links to Wowhead, with its tooltip on hover. |
 | 🕰️ **History** | Saves a daily price snapshot to `history/` and charts cheapest Favor and rep cost over time. |
+
+## 🌐 Live report
+
+**[tylxr59.github.io/Waylay](https://tylxr59.github.io/Waylay/)** rebuilds every day from fresh TSM prices. US (all rulesets) is the main page. Pick your region, ruleset and faction at the top, and it remembers your choice. Nothing to install if you just want the answer.
 
 ## 📋 Requirements
 
