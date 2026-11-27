@@ -1,5 +1,5 @@
 {
-  "_source": "Wowhead Craftsman's Writs guide + every writ's quest objective, checked 2026-11-26 (WoW Forever 1.60.1). Coordinates are zone map %, given only where the guide lacked a hand-in.",
+  "_source": "Wowhead Craftsman's Writs guide + every writ's quest objective, checked 2026-11-26 (WoW Forever 1.60.1). Hand-in IDs come from Wowhead quest endpoints and NPC records. Coordinates are zone map %, given only where the guide lacked a hand-in.",
   "writs": [
     {
       "itemId": 264049,
@@ -19,7 +19,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257316
     },
     {
       "itemId": 264045,
@@ -39,7 +40,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 4496
     },
     {
       "itemId": 264036,
@@ -59,7 +61,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 4706
     },
     {
       "itemId": 264027,
@@ -79,7 +82,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 6626
     },
     {
       "itemId": 264048,
@@ -99,7 +103,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257304
     },
     {
       "itemId": 264053,
@@ -119,7 +124,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 261961
     },
     {
       "itemId": 264037,
@@ -139,7 +145,8 @@
           "qty": 200
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 8305
     },
     {
       "itemId": 264044,
@@ -159,7 +166,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 2663
     },
     {
       "itemId": 264041,
@@ -179,7 +187,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 3134
     },
     {
       "itemId": 264019,
@@ -199,7 +208,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 8305
     },
     {
       "itemId": 264018,
@@ -219,7 +229,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 4720
     },
     {
       "itemId": 264016,
@@ -239,7 +250,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 4201
     },
     {
       "itemId": 264011,
@@ -259,7 +271,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257281
     },
     {
       "itemId": 264012,
@@ -279,7 +292,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257296
     },
     {
       "itemId": 264030,
@@ -299,7 +313,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257304
     },
     {
       "itemId": 264039,
@@ -319,7 +334,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257304
     },
     {
       "itemId": 264015,
@@ -339,7 +355,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 261928
     },
     {
       "itemId": 264035,
@@ -359,7 +376,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 7853
     },
     {
       "itemId": 264021,
@@ -379,7 +397,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257296
     },
     {
       "itemId": 264054,
@@ -399,7 +418,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 6548
     },
     {
       "itemId": 264028,
@@ -419,7 +439,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 8305
     },
     {
       "itemId": 264026,
@@ -439,7 +460,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 2501
     },
     {
       "itemId": 264024,
@@ -459,7 +481,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 261932
     },
     {
       "itemId": 264038,
@@ -479,7 +502,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257281
     },
     {
       "itemId": 264043,
@@ -499,7 +523,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 4201
     },
     {
       "itemId": 264040,
@@ -519,7 +544,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257322
     },
     {
       "itemId": 264022,
@@ -539,7 +565,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257316
     },
     {
       "itemId": 264013,
@@ -559,7 +586,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257315
     },
     {
       "itemId": 264017,
@@ -579,7 +607,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 14508
     },
     {
       "itemId": 264047,
@@ -599,7 +628,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257282
     },
     {
       "itemId": 264032,
@@ -619,7 +649,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 3134
     },
     {
       "itemId": 264031,
@@ -639,7 +670,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257317
     },
     {
       "itemId": 264029,
@@ -659,7 +691,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257282
     },
     {
       "itemId": 264020,
@@ -679,7 +712,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257282
     },
     {
       "itemId": 264051,
@@ -699,7 +733,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 6176
     },
     {
       "itemId": 264042,
@@ -719,7 +754,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 3536
     },
     {
       "itemId": 264033,
@@ -739,7 +775,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 261932
     },
     {
       "itemId": 264046,
@@ -759,7 +796,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 8305
     },
     {
       "itemId": 264052,
@@ -779,7 +817,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 4201
     },
     {
       "itemId": 264025,
@@ -799,7 +838,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 4201
     },
     {
       "itemId": 264034,
@@ -819,7 +859,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 4201
     },
     {
       "itemId": 264014,
@@ -839,7 +880,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 3134
     },
     {
       "itemId": 264023,
@@ -859,7 +901,9 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 642320,
+      "npcType": "object"
     },
     {
       "itemId": 264050,
@@ -879,7 +923,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 3134
     },
     {
       "itemId": 264055,
@@ -899,7 +944,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 8305
     },
     {
       "itemId": 264081,
@@ -919,7 +965,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 11438
     },
     {
       "itemId": 264100,
@@ -939,7 +986,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262306
     },
     {
       "itemId": 264101,
@@ -959,7 +1007,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 8579
     },
     {
       "itemId": 264110,
@@ -979,7 +1028,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262284
     },
     {
       "itemId": 264072,
@@ -999,7 +1049,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262143
     },
     {
       "itemId": 264060,
@@ -1019,7 +1070,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262143
     },
     {
       "itemId": 264084,
@@ -1039,7 +1091,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262143
     },
     {
       "itemId": 264114,
@@ -1081,7 +1134,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 2888
     },
     {
       "itemId": 264082,
@@ -1101,7 +1155,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262072
     },
     {
       "itemId": 264106,
@@ -1121,7 +1176,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 6546
     },
     {
       "itemId": 264091,
@@ -1163,7 +1219,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262072
     },
     {
       "itemId": 264115,
@@ -1183,7 +1240,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 9273
     },
     {
       "itemId": 264066,
@@ -1203,7 +1261,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262388
     },
     {
       "itemId": 264108,
@@ -1223,7 +1282,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 14470
     },
     {
       "itemId": 264087,
@@ -1265,7 +1325,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262294
     },
     {
       "itemId": 264086,
@@ -1285,7 +1346,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262284
     },
     {
       "itemId": 264056,
@@ -1305,7 +1367,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 2921
     },
     {
       "itemId": 264083,
@@ -1325,7 +1388,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 11019
     },
     {
       "itemId": 264065,
@@ -1346,7 +1410,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 5594
     },
     {
       "itemId": 264074,
@@ -1366,7 +1431,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262284
     },
     {
       "itemId": 264078,
@@ -1386,7 +1452,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 7801
     },
     {
       "itemId": 264061,
@@ -1406,7 +1473,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 11802
     },
     {
       "itemId": 264093,
@@ -1426,7 +1494,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 11863
     },
     {
       "itemId": 264089,
@@ -1446,7 +1515,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 14743
     },
     {
       "itemId": 264079,
@@ -1466,7 +1536,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 9619
     },
     {
       "itemId": 264069,
@@ -1486,7 +1557,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 11438
     },
     {
       "itemId": 264057,
@@ -1506,7 +1578,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 13717
     },
     {
       "itemId": 264058,
@@ -1526,7 +1599,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 4503
     },
     {
       "itemId": 264104,
@@ -1546,7 +1620,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 2817
     },
     {
       "itemId": 264062,
@@ -1566,7 +1641,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262284
     },
     {
       "itemId": 264080,
@@ -1608,7 +1684,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 5634
     },
     {
       "itemId": 264088,
@@ -1628,7 +1705,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262379
     },
     {
       "itemId": 264073,
@@ -1648,7 +1726,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 12024
     },
     {
       "itemId": 264059,
@@ -1668,7 +1747,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 10922
     },
     {
       "itemId": 264099,
@@ -1688,7 +1768,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 14628
     },
     {
       "itemId": 264112,
@@ -1708,7 +1789,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262379
     },
     {
       "itemId": 264071,
@@ -1728,7 +1810,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 10921
     },
     {
       "itemId": 264097,
@@ -1737,7 +1820,7 @@
         "Leatherworking"
       ],
       "tier": "Expert",
-      "npc": "Narianna <Bowyer>",
+      "npc": "Narianna",
       "zone": "Moonglade",
       "questId": 94297,
       "rep": 125,
@@ -1748,7 +1831,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 12029
     },
     {
       "itemId": 264111,
@@ -1768,7 +1852,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 14634
     },
     {
       "itemId": 264064,
@@ -1788,7 +1873,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262306
     },
     {
       "itemId": 264105,
@@ -1808,7 +1894,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 13656
     },
     {
       "itemId": 264107,
@@ -1828,7 +1915,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 9116
     },
     {
       "itemId": 264075,
@@ -1848,7 +1936,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 14624
     },
     {
       "itemId": 264109,
@@ -1868,7 +1957,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 11795
     },
     {
       "itemId": 264068,
@@ -1888,7 +1978,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257429
     },
     {
       "itemId": 264070,
@@ -1908,7 +1999,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 270919
     },
     {
       "itemId": 264098,
@@ -1928,7 +2020,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262284
     },
     {
       "itemId": 264103,
@@ -1948,7 +2041,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 12959
     },
     {
       "itemId": 264077,
@@ -1968,7 +2062,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 7408
     },
     {
       "itemId": 264102,
@@ -2010,7 +2105,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 12029
     },
     {
       "itemId": 264113,
@@ -2030,7 +2126,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 6568
     },
     {
       "itemId": 264076,
@@ -2072,7 +2169,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 10924
     },
     {
       "itemId": 264096,
@@ -2092,7 +2190,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262143
     },
     {
       "itemId": 264067,
@@ -2112,7 +2211,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 9272
     },
     {
       "itemId": 264132,
@@ -2172,7 +2272,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 14348
     },
     {
       "itemId": 264130,
@@ -2212,7 +2313,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 262041
     },
     {
       "itemId": 264119,
@@ -2221,7 +2323,7 @@
         "Alchemy"
       ],
       "tier": "Artisan",
-      "npc": "Hastings <The Caretaker>",
+      "npc": "Hastings",
       "zone": "Deadwind Pass",
       "questId": 94319,
       "rep": 200,
@@ -2232,7 +2334,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257743
     },
     {
       "itemId": 264117,
@@ -2252,7 +2355,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 7363
     },
     {
       "itemId": 264133,
@@ -2272,7 +2376,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 11185
     },
     {
       "itemId": 264156,
@@ -2401,7 +2506,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 11706
     },
     {
       "itemId": 264137,
@@ -2410,7 +2516,7 @@
         "Engineering"
       ],
       "tier": "Artisan",
-      "npc": "Hastings <The Caretaker>",
+      "npc": "Hastings",
       "zone": "Deadwind Pass",
       "questId": 94337,
       "rep": 200,
@@ -2421,7 +2527,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257743
     },
     {
       "itemId": 264138,
@@ -2657,7 +2764,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 11705
     },
     {
       "itemId": 264128,
@@ -2677,7 +2785,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257750
     },
     {
       "itemId": 264127,
@@ -2719,7 +2828,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 8379
     },
     {
       "itemId": 264126,
@@ -2739,7 +2849,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 7363
     },
     {
       "itemId": 264125,
@@ -2781,7 +2892,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 7363
     },
     {
       "itemId": 264154,
@@ -2801,7 +2913,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 14437
     },
     {
       "itemId": 264150,
@@ -2832,7 +2945,7 @@
         "Leatherworking"
       ],
       "tier": "Artisan",
-      "npc": "Hastings <The Caretaker>",
+      "npc": "Hastings",
       "zone": "Deadwind Pass",
       "questId": 94346,
       "rep": 200,
@@ -2843,7 +2956,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257743
     },
     {
       "itemId": 264158,
@@ -2863,7 +2977,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 15194
     },
     {
       "itemId": 264141,
@@ -2958,7 +3073,7 @@
         "Tailoring"
       ],
       "tier": "Artisan",
-      "npc": "Hastings <The Caretaker>",
+      "npc": "Hastings",
       "zone": "Deadwind Pass",
       "questId": 94355,
       "rep": 200,
@@ -2969,7 +3084,8 @@
           "qty": 1
         }
       ],
-      "requiresSource": "wowhead-quest"
+      "requiresSource": "wowhead-quest",
+      "npcId": 257743
     },
     {
       "itemId": 264145,
